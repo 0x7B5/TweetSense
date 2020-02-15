@@ -14,7 +14,7 @@ def getTweets(username):
                         "Text": tweet.text
                       })
                       
-    return jsonify({'Data': tweets})
+    return jsonify(tweets)
     
 @app.route('/deepTweets/<username>', methods=['GET'])
 def getDeepTweets(username):
@@ -27,7 +27,7 @@ def getDeepTweets(username):
                         "Text": tweet.text
                       })
                       
-    return jsonify({'Data': tweets})
+    return jsonify(tweets)
 
 @app.route('/topic/<topic>', methods=['GET'])
 def getTopicTweets(topic):
@@ -40,7 +40,7 @@ def getTopicTweets(topic):
                         "Text": tweet.text
                       })
                       
-    return jsonify({'Data': tweets})
+    return jsonify(tweets)
 
 if __name__ == '__main__':
     app.run(debug=False)
