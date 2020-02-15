@@ -8,11 +8,10 @@
 
 import Foundation
 import UIKit
-import TwitterKit
+
 
 class SearchVC: UIViewController, UITextFieldDelegate {
     
-    var timelineVC: TimelineViewer!
     
     @IBOutlet weak var tweetTF: UITextField!
     
@@ -34,11 +33,7 @@ class SearchVC: UIViewController, UITextFieldDelegate {
     
     func handleText() {
         if tweetTF.text != nil && tweetTF.text != "" {
-            timelineVC = TimelineViewer()
-            timelineVC.passingTwitterName = tweetTF.text
-            let navC = UINavigationController(rootViewController: timelineVC)
-            self.present(navC, animated: true, completion: nil)
-            
+            analyzeTweets()
         } else {
             let alert = UIAlertController(title: "Username not found", message: "Please Enter Valid Username", preferredStyle: .alert)
             
@@ -51,13 +46,7 @@ class SearchVC: UIViewController, UITextFieldDelegate {
     
     func analyzeTweets() {
         
-        let counter = timelineVC.countOfTweets()
-        print("There are " + String(counter) + " loaded tweets.\n\n")
-        for i in 0..<counter {
-            let tweet = timelineVC.tweet(at: Int(i))
-            print(tweet.author.formattedScreenName + ": " + tweet.text)
-        }
-        
+      
     }
     
 }

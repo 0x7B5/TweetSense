@@ -19,7 +19,7 @@
 		CC8D880A23F7C0EE0098E0D5 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D880923F7C0EE0098E0D5 /* SearchVC.swift */; };
 		CC8D880C23F7C3B50098E0D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8D880B23F7C3B50098E0D5 /* Main.storyboard */; };
 		CC8D880F23F86EDD0098E0D5 /* TwitterUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D880E23F86EDD0098E0D5 /* TwitterUtils.swift */; };
-		CC8D881223F876A90098E0D5 /* TimelineViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D881123F876A90098E0D5 /* TimelineViewer.swift */; };
+		CC8D881823F880A80098E0D5 /* TwitterCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D881723F880A80098E0D5 /* TwitterCredentials.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +39,7 @@
 		CC8D880923F7C0EE0098E0D5 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		CC8D880B23F7C3B50098E0D5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CC8D880E23F86EDD0098E0D5 /* TwitterUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterUtils.swift; sourceTree = "<group>"; };
-		CC8D881123F876A90098E0D5 /* TimelineViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewer.swift; sourceTree = "<group>"; };
+		CC8D881723F880A80098E0D5 /* TwitterCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterCredentials.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +116,6 @@
 			children = (
 				CC8D87EA23F77C270098E0D5 /* MainVC.swift */,
 				CC8D880923F7C0EE0098E0D5 /* SearchVC.swift */,
-				CC8D881123F876A90098E0D5 /* TimelineViewer.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -144,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				CC8D880E23F86EDD0098E0D5 /* TwitterUtils.swift */,
+				CC8D881723F880A80098E0D5 /* TwitterCredentials.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -169,7 +169,6 @@
 				CC8D87E023F77C270098E0D5 /* Frameworks */,
 				CC8D87E123F77C270098E0D5 /* Resources */,
 				0CE2D255A2B5B8A0BCA13D7E /* [CP] Embed Pods Frameworks */,
-				44AA1C6FCB272415C2264B97 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,23 +244,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TweetSense/Pods-TweetSense-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		44AA1C6FCB272415C2264B97 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TweetSense/Pods-TweetSense-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TweetSense/Pods-TweetSense-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TweetSense/Pods-TweetSense-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8BAED0612CC3F3BFC635DCBE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -291,11 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC8D881223F876A90098E0D5 /* TimelineViewer.swift in Sources */,
 				CC8D87EB23F77C270098E0D5 /* MainVC.swift in Sources */,
 				CC8D87FF23F77EAB0098E0D5 /* MainView.swift in Sources */,
 				CC8D880F23F86EDD0098E0D5 /* TwitterUtils.swift in Sources */,
 				CC8D880623F7B45D0098E0D5 /* UIView+Extensions.swift in Sources */,
+				CC8D881823F880A80098E0D5 /* TwitterCredentials.swift in Sources */,
 				CC8D87E723F77C270098E0D5 /* AppDelegate.swift in Sources */,
 				CC8D880123F798D00098E0D5 /* Constants.swift in Sources */,
 				CC8D880A23F7C0EE0098E0D5 /* SearchVC.swift in Sources */,

@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
+
 public struct Constants {
     static let mainBackground = UIImage(named: "main")!
+   
 }
 
