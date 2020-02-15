@@ -73,6 +73,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LgB-Gb-9Bb"/>
                     </view>
+                    <connections>
+                        <outletCollection property="imageCollection" destination="WT5-jA-VDw" collectionClass="NSMutableArray" id="dOi-M4-qgD"/>
+                        <outletCollection property="imageCollection" destination="TEN-bC-J91" collectionClass="NSMutableArray" id="bRD-jc-fOe"/>
+                        <outletCollection property="imageCollection" destination="kZQ-Os-2yg" collectionClass="NSMutableArray" id="BOS-mD-Dnp"/>
+                        <outletCollection property="imageCollection" destination="6tn-jQ-uk1" collectionClass="NSMutableArray" id="TWk-3v-JoN"/>
+                        <outletCollection property="imageCollection" destination="Ymf-w9-f73" collectionClass="NSMutableArray" id="RZm-ki-s67"/>
+                        <outletCollection property="imageCollection" destination="DQ5-yW-99I" collectionClass="NSMutableArray" id="wLv-aO-2Eb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="igW-48-E0L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

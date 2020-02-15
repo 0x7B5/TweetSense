@@ -9,8 +9,7 @@
 import UIKit
 
 class MainVC: UIViewController {
-
-
+    @IBOutlet var imageCollection:[UIView]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
