@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // self.window?.rootViewController = MainVC()
         
         #warning("Not sure if this is supposed to be in app delegate")
-        NetworkManager.performAuthenticationToFetchToken()
         return true
     }
 

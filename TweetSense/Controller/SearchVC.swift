@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MBProgressHUD
 
 
 class SearchVC: UIViewController, UITextFieldDelegate {
@@ -33,7 +34,10 @@ class SearchVC: UIViewController, UITextFieldDelegate {
     
     func handleText() {
         if tweetTF.text != nil && tweetTF.text != "" {
-            analyzeTweets()
+            let tempText = tweetTF.text!
+            getTweets(username: tempText, completion: { tweets in
+                print(tweets)
+            })
         } else {
             let alert = UIAlertController(title: "Username not found", message: "Please Enter Valid Username", preferredStyle: .alert)
             
@@ -44,9 +48,41 @@ class SearchVC: UIViewController, UITextFieldDelegate {
         tweetTF.text = ""
     }
     
-    func analyzeTweets() {
+    func getTweets(username: String, completion: @escaping ([Tweet]?) -> ()) {
+        let loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
+        loadingNotification.mode = MBProgressHUDMode.indeterminate
+        loadingNotification.label.text = "Fetching Tweets"
         
-      
+        if let url = URL(string:("https://tweetsense-268300.appspot.com/tweets/"+username)) {
+            URLSession.shared.dataTask(with: url) { data, response, error in
+                guard let data = data else { return }
+                do {
+                    var userTweets = [Tweet]()
+                    let json = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]]
+                    //print(json)
+                    
+                    for i in json! {
+                        let itemDate = i["Date"] as! String
+                        let itemText = i["Text"] as! String
+                        userTweets.append(Tweet(date: itemDate, text: itemText))
+                    }
+
+                    print(userTweets)
+                    DispatchQueue.main.async { () -> Void in
+                        loadingNotification.hide(animated: true)
+                        completion(userTweets)
+                    }
+                } catch let parsingError {
+                    print("Error", parsingError)
+                    DispatchQueue.main.async { () -> Void in
+                        loadingNotification.hide(animated: true)
+                        completion(nil)
+                    }
+                }
+                
+                
+            }.resume()
+        }
     }
     
 }

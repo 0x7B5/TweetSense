@@ -11,7 +11,4 @@ import Foundation
 public class TwitterUtils {
     static let shared = TwitterUtils()
     
-    func isGithubUser(username: String, completion: @escaping (Bool) -> ()) {
-        
-    }
 }

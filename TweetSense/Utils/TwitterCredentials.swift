@@ -8,8 +8,8 @@
 
 struct TwitterAccountCredentials {
    
-    static let consumerKey = "HaEtMGlSaPlTXJ78aIPTvOnO"
-    static let consumerSecret = "eGEG7pfAdpTnQKgxm993bh7vRrKPecjOxnyXv2NO0yuCUGSy55"
+    static let consumerKey = ""
+    static let consumerSecret = ""
     static let concatenatedKeyAndSecret = consumerKey+":"+consumerSecret
     static func getBase64EncodedValue() -> String? {
         return concatenatedKeyAndSecret.base64Encoded

@@ -20,6 +20,7 @@
 		CC8D880C23F7C3B50098E0D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8D880B23F7C3B50098E0D5 /* Main.storyboard */; };
 		CC8D880F23F86EDD0098E0D5 /* TwitterUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D880E23F86EDD0098E0D5 /* TwitterUtils.swift */; };
 		CC8D881823F880A80098E0D5 /* TwitterCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D881723F880A80098E0D5 /* TwitterCredentials.swift */; };
+		CC8D882123F89CE90098E0D5 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D882023F89CE90098E0D5 /* Tweet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		CC8D880B23F7C3B50098E0D5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CC8D880E23F86EDD0098E0D5 /* TwitterUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterUtils.swift; sourceTree = "<group>"; };
 		CC8D881723F880A80098E0D5 /* TwitterCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterCredentials.swift; sourceTree = "<group>"; };
+		CC8D882023F89CE90098E0D5 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		CC8D87FB23F77D390098E0D5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CC8D882023F89CE90098E0D5 /* Tweet.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				CC8D87EB23F77C270098E0D5 /* MainVC.swift in Sources */,
 				CC8D87FF23F77EAB0098E0D5 /* MainView.swift in Sources */,
 				CC8D880F23F86EDD0098E0D5 /* TwitterUtils.swift in Sources */,
+				CC8D882123F89CE90098E0D5 /* Tweet.swift in Sources */,
 				CC8D880623F7B45D0098E0D5 /* UIView+Extensions.swift in Sources */,
 				CC8D881823F880A80098E0D5 /* TwitterCredentials.swift in Sources */,
 				CC8D87E723F77C270098E0D5 /* AppDelegate.swift in Sources */,

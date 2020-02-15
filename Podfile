@@ -7,6 +7,6 @@ target 'TweetSense' do
   
   # Pods for TweetSense
   pod 'SnapKit', '~> 5.0.0'
-  pod 'Alamofire','4.8.2'
-  pod 'AlamofireImage','3.5'
+  pod 'MBProgressHUD', '~> 1.2.0'
+  pod 'BMSCore', '~> 2.0'
 end
