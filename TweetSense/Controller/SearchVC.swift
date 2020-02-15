@@ -1,25 +1,24 @@
 //
-//  ViewController.swift
+//  SearchVC.swift
 //  TweetSense
 //
-//  Created by Vlad Munteanu on 2/14/20.
+//  Created by Vlad Munteanu on 2/15/20.
 //  Copyright © 2020 Vlad Munteanu. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class ViewController: UIViewController {
 
-    let mainView = MainView()
+class SearchVC: UIViewController {
+    
+    
     override func loadView() {
-        self.view = mainView
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
 }
-

@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		4FCB9A80115E200859219E5B /* Pods_TweetSense.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4241DED2DB20195C7EFC0758 /* Pods_TweetSense.framework */; };
 		CC8D87E723F77C270098E0D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D87E623F77C270098E0D5 /* AppDelegate.swift */; };
-		CC8D87EB23F77C270098E0D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D87EA23F77C270098E0D5 /* ViewController.swift */; };
+		CC8D87EB23F77C270098E0D5 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D87EA23F77C270098E0D5 /* MainVC.swift */; };
 		CC8D87EE23F77C270098E0D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8D87EC23F77C270098E0D5 /* Main.storyboard */; };
 		CC8D87F023F77C280098E0D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC8D87EF23F77C280098E0D5 /* Assets.xcassets */; };
 		CC8D87F323F77C280098E0D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8D87F123F77C280098E0D5 /* LaunchScreen.storyboard */; };
 		CC8D87FF23F77EAB0098E0D5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D87FE23F77EAB0098E0D5 /* MainView.swift */; };
+		CC8D880123F798D00098E0D5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D880023F798D00098E0D5 /* Constants.swift */; };
+		CC8D880623F7B45D0098E0D5 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D880523F7B45D0098E0D5 /* UIView+Extensions.swift */; };
+		CC8D880823F7C0CE0098E0D5 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D880723F7C0CE0098E0D5 /* MainTabBarController.swift */; };
+		CC8D880A23F7C0EE0098E0D5 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D880923F7C0EE0098E0D5 /* SearchVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +26,16 @@
 		9D41EFD4B711A2B0F4ED51B6 /* Pods-TweetSense.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetSense.debug.xcconfig"; path = "Target Support Files/Pods-TweetSense/Pods-TweetSense.debug.xcconfig"; sourceTree = "<group>"; };
 		CC8D87E323F77C270098E0D5 /* TweetSense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetSense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8D87E623F77C270098E0D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CC8D87EA23F77C270098E0D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC8D87EA23F77C270098E0D5 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		CC8D87ED23F77C270098E0D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC8D87EF23F77C280098E0D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC8D87F223F77C280098E0D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC8D87F423F77C280098E0D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC8D87FE23F77EAB0098E0D5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CC8D880023F798D00098E0D5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CC8D880523F7B45D0098E0D5 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		CC8D880723F7C0CE0098E0D5 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		CC8D880923F7C0EE0098E0D5 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,7 @@
 		CC8D87E523F77C270098E0D5 /* TweetSense */ = {
 			isa = PBXGroup;
 			children = (
+				CC8D880423F7B4530098E0D5 /* Extensions */,
 				CC8D87FA23F77D360098E0D5 /* View */,
 				CC8D87FB23F77D390098E0D5 /* Model */,
 				CC8D87FC23F77D3F0098E0D5 /* Controller */,
@@ -99,7 +108,9 @@
 		CC8D87FC23F77D3F0098E0D5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CC8D87EA23F77C270098E0D5 /* ViewController.swift */,
+				CC8D87EA23F77C270098E0D5 /* MainVC.swift */,
+				CC8D880723F7C0CE0098E0D5 /* MainTabBarController.swift */,
+				CC8D880923F7C0EE0098E0D5 /* SearchVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -110,8 +121,17 @@
 				CC8D87E623F77C270098E0D5 /* AppDelegate.swift */,
 				CC8D87EF23F77C280098E0D5 /* Assets.xcassets */,
 				CC8D87F123F77C280098E0D5 /* LaunchScreen.storyboard */,
+				CC8D880023F798D00098E0D5 /* Constants.swift */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC8D880423F7B4530098E0D5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CC8D880523F7B45D0098E0D5 /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E2C7006DB770BE60122CC647 /* Pods */ = {
@@ -238,9 +258,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC8D87EB23F77C270098E0D5 /* ViewController.swift in Sources */,
+				CC8D87EB23F77C270098E0D5 /* MainVC.swift in Sources */,
 				CC8D87FF23F77EAB0098E0D5 /* MainView.swift in Sources */,
+				CC8D880823F7C0CE0098E0D5 /* MainTabBarController.swift in Sources */,
+				CC8D880623F7B45D0098E0D5 /* UIView+Extensions.swift in Sources */,
 				CC8D87E723F77C270098E0D5 /* AppDelegate.swift in Sources */,
+				CC8D880123F798D00098E0D5 /* Constants.swift in Sources */,
+				CC8D880A23F7C0EE0098E0D5 /* SearchVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
