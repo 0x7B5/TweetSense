@@ -1,16 +1,24 @@
 PODS:
   - SnapKit (5.0.1)
+  - TwitterCore (3.2.0)
+  - TwitterKit (3.4.2):
+    - TwitterCore (>= 3.2.0)
 
 DEPENDENCIES:
   - SnapKit (~> 5.0.0)
+  - TwitterKit
 
 SPEC REPOS:
   trunk:
     - SnapKit
+    - TwitterCore
+    - TwitterKit
 
 SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
+  TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
 
-PODFILE CHECKSUM: 69e2d9ac6746705eaffcfb64ff024e2506c0d0f1
+PODFILE CHECKSUM: c0ff7059745e38db5ac034b4f336aa4d7966947b
 
 COCOAPODS: 1.9.0.beta.3

@@ -86,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="-86.956521739130437" y="67.633928571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--SearchVC-->
         <scene sceneID="Qhm-jb-GfY">
             <objects>
-                <viewController id="IWv-kO-7GN" sceneMemberID="viewController">
+                <viewController id="IWv-kO-7GN" customClass="SearchVC" customModule="TweetSense" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w6f-lq-TLW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,6 +123,9 @@
                         <viewLayoutGuide key="safeArea" id="92J-HI-A4D"/>
                     </view>
                     <navigationItem key="navigationItem" id="IzW-dx-5sK"/>
+                    <connections>
+                        <outlet property="tweetTF" destination="TTR-NE-rDX" id="NSP-9g-PVS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWJ-w3-DFs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

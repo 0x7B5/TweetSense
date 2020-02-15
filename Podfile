@@ -7,5 +7,5 @@ target 'TweetSense' do
   
   # Pods for TweetSense
   pod 'SnapKit', '~> 5.0.0'
-
+  pod 'TwitterKit'
 end
