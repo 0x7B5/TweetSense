@@ -9,4 +9,5 @@ target 'TweetSense' do
   pod 'SnapKit', '~> 5.0.0'
   pod 'MBProgressHUD', '~> 1.2.0'
   pod 'BMSCore', '~> 2.0'
+  pod 'PopupDialog', '~> 1.1'
 end

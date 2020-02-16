@@ -12,6 +12,7 @@ import UIKit
 
 public struct Constants {
     static let mainBackground = UIImage(named: "main")!
+    static var userSearch = true
    
 }
 

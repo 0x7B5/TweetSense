@@ -44,9 +44,14 @@ class SearchVC: UIViewController, UITextFieldDelegate {
     func handleText() {
         if tweetTF.text != nil && tweetTF.text != "" {
             let tempText = tweetTF.text!
-            getTweets(username: tempText, completion: { tweets in
-                self.performSegue(withIdentifier: "toProfile", sender: self)
-            })
+            if (Constants.userSearch == false) {
+                
+            } else {
+                getUserTweets(username: tempText, completion: { tweets in
+                    self.performSegue(withIdentifier: "toProfile", sender: self)
+                })
+            }
+            
         } else {
             let alert = UIAlertController(title: "Username not found", message: "Please Enter Valid Username", preferredStyle: .alert)
             
@@ -57,7 +62,7 @@ class SearchVC: UIViewController, UITextFieldDelegate {
         tweetTF.text = ""
     }
     
-    func getTweets(username: String, completion: @escaping ([Tweet]?) -> ()) {
+    func getUserTweets(username: String, completion: @escaping ([Tweet]?) -> ()) {
         let loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
         loadingNotification.mode = MBProgressHUDMode.indeterminate
         loadingNotification.label.text = "Fetching Tweets"
@@ -75,7 +80,7 @@ class SearchVC: UIViewController, UITextFieldDelegate {
                         let itemText = i["Text"] as! String
                         userTweets.append(Tweet(date: itemDate, text: itemText))
                     }
-
+                    
                     print(userTweets)
                     DispatchQueue.main.async { () -> Void in
                         loadingNotification.hide(animated: true)
@@ -95,13 +100,17 @@ class SearchVC: UIViewController, UITextFieldDelegate {
     }
     
     func makePrefix() {
-       
+        
     }
     
     func setupTextfield() {
         let centeredParagraphStyle = NSMutableParagraphStyle()
         centeredParagraphStyle.alignment = .center
-        let attributedPlaceholder = NSAttributedString(string: "Query", attributes: [NSAttributedString.Key.paragraphStyle: centeredParagraphStyle, NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)])
+        var attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSAttributedString.Key.paragraphStyle: centeredParagraphStyle, NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)])
+        
+        if (Constants.userSearch == false) {
+            attributedPlaceholder = NSAttributedString(string: "Topic", attributes: [NSAttributedString.Key.paragraphStyle: centeredParagraphStyle, NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)])
+        }
         tweetTF.attributedPlaceholder = attributedPlaceholder
         //tweetTF.placeholder = "Username"
         tweetTF.font = UIFont.systemFont(ofSize: 42, weight: UIFont.Weight(rawValue: 1.0))

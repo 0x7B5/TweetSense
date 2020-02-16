@@ -137,7 +137,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="plus"/>
                                 <connections>
-                                    <segue destination="IWv-kO-7GN" kind="show" id="f4q-Yh-QOc"/>
+                                    <action selector="addButtonPressed:" destination="y5Z-iH-pqD" eventType="touchUpInside" id="z1z-nn-ObO"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w1x-jl-6x2">
@@ -202,6 +202,7 @@
                         <outletCollection property="viewCollection" destination="Rwh-tS-GNE" collectionClass="NSMutableArray" id="I91-gt-J8J"/>
                         <outletCollection property="viewCollection" destination="pKc-4E-M3t" collectionClass="NSMutableArray" id="tk5-jV-7JZ"/>
                         <segue destination="Hq8-S5-rPv" kind="show" id="aGt-w7-F4L"/>
+                        <segue destination="IWv-kO-7GN" kind="show" identifier="goToSearch" id="dJs-vs-gda"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="igW-48-E0L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -221,7 +222,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ar-tz-r7E">
-                                <rect key="frame" x="0.0" y="197" width="375" height="560"/>
+                                <rect key="frame" x="0.0" y="197" width="375" height="615"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Query" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="TTR-NE-rDX">
