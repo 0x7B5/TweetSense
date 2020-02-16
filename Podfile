@@ -11,4 +11,5 @@ target 'TweetSense' do
   pod 'PopupDialog', '~> 1.1'
   pod 'Swifter', :git => 'https://github.com/mattdonnelly/Swifter.git'
   pod 'IBMSwiftSDKCore'
+  pod 'SwiftyJSON', '~> 4.0'
 end

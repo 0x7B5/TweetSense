@@ -185,6 +185,7 @@
 		CC68F3E623F954D100484216 /* AnalysisResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnalysisResults.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/AnalysisResults.swift"; sourceTree = "<group>"; };
 		CC68F3E723F954D100484216 /* CategoriesRelevantText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoriesRelevantText.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/CategoriesRelevantText.swift"; sourceTree = "<group>"; };
 		CC68F3E823F954D100484216 /* KeywordsResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeywordsResult.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/KeywordsResult.swift"; sourceTree = "<group>"; };
+		CC68F41B23F956C500484216 /* TweetSense.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TweetSense.entitlements; sourceTree = "<group>"; };
 		CC8D87E323F77C270098E0D5 /* TweetSense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetSense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8D87E623F77C270098E0D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC8D87EA23F77C270098E0D5 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -350,6 +351,7 @@
 		CC8D87E523F77C270098E0D5 /* TweetSense */ = {
 			isa = PBXGroup;
 			children = (
+				CC68F41B23F956C500484216 /* TweetSense.entitlements */,
 				CC68F35E23F947BB00484216 /* Watson */,
 				CC8D880D23F86ECE0098E0D5 /* Utils */,
 				CC8D880423F7B4530098E0D5 /* Extensions */,
@@ -781,6 +783,7 @@
 			baseConfigurationReference = 9D41EFD4B711A2B0F4ED51B6 /* Pods-TweetSense.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TweetSense/TweetSense.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8C8RXSHKT;
 				INFOPLIST_FILE = TweetSense/Info.plist;
@@ -801,6 +804,7 @@
 			baseConfigurationReference = 1BFAF0F51F62CBDDC6707E6F /* Pods-TweetSense.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TweetSense/TweetSense.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8C8RXSHKT;
 				INFOPLIST_FILE = TweetSense/Info.plist;

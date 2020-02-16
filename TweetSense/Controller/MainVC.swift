@@ -18,7 +18,10 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        AnalysisUtils.shared.callWatson()
+        AnalysisUtils.shared.getSentimentScore(toAnalyze: "Inception is one of the best movies of all time. I think everyone should watch it.", completion: {
+            yuh in
+            
+        })
     }
     
     func setupUI() {

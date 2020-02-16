@@ -7,13 +7,13 @@
 //
 
 import Foundation
-
+import SwiftyJSON
 
 public class AnalysisUtils {
     static let shared = AnalysisUtils()
     var analyzedCategoriesArray: [ToneCategory] = []
     
-    func callWatson() {
+    func callWatson(toAnalyze: String, completion: @escaping (Double?) -> ()) {
         
         #warning("Put today's date here")
         let inputText = """
@@ -28,9 +28,9 @@ I'm worried my #ThisPhone is going to overheat like my brother's did.
 """
         let version = "YYYY-MM-DD" // use today's date for the most recent version
         let toneAnalyzer = ToneAnalyzer(version: "2020-02-15", authenticator: WatsonBasicAuthenticator(username: "apikey", password: "OiiD65lKNoiE0kBdlApvIi4uE66hmxqKlF5qxwG4pl-J"))
-
+        
         let input = ToneInput(text: inputText)
-      
+        
         toneAnalyzer.tone(toneContent: .toneInput(input)) { response, error in
             if let error = error {
                 print(error)
@@ -40,26 +40,57 @@ I'm worried my #ThisPhone is going to overheat like my brother's did.
                 return
             }
             self.analyzedCategoriesArray = []
-
+            
             print(tones)
-            
-            
-//
-//            // Loop through document tones
-//            for documentTone in categories {
-//                // Set tone category parameters
-//                let toneCategoryId = documentTone.categoryID
-//                let toneCategoryName = documentTone.categoryName
-//                let tones = documentTone.tones
-//                // Create new tone category with information provided by document tone
-//                let newToneCategory = try! JSONDecoder().decode(ToneCategory.self, from: response)
-//                // Add new tone category to array
-//                self.analyzedCategoriesArray.append(newToneCategory)
-//            }
             
         }
     }
+    
+    func getSentimentScore(toAnalyze: String, completion: @escaping (Double?) -> ()) {
+        
+        let yuh = """
+        {
+        "document":{
+        "type":"PLAIN_TEXT",
+        "content":"\(toAnalyze)"
+        },
+        "encodingType": "UTF8"
+        }
+        """
+       
+        guard let url = URL(string: "https://language.googleapis.com/v1/documents:analyzeSentiment?key=AIzaSyAvagB9vuqGp00y8bYl7lgqQmDoBtkioGM"),
+            let payload = yuh.data(using: .utf8) else {
+                return
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
 
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = payload
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            guard error == nil else { print(error!.localizedDescription); return }
+            guard let data = data else { print("Empty data"); return }
+            
+            if let str = String(data: data, encoding: .utf8) {
+                print(str)
+                completion(nil)
+            }
+        }.resume()
+        
+    }
+    
+    func convertToDictionary(text: String) -> [String: Any]? {
+        if let data = text.data(using: .utf8) {
+            do {
+                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        return nil
+    }
     
     
     

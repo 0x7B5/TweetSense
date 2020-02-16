@@ -6,6 +6,7 @@ PODS:
     - DynamicBlurView (~> 4.0)
   - SnapKit (5.0.1)
   - Swifter (2.3.0)
+  - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
   - IBMSwiftSDKCore
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - PopupDialog (~> 1.1)
   - SnapKit (~> 5.0.0)
   - Swifter (from `https://github.com/mattdonnelly/Swifter.git`)
+  - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   trunk:
@@ -21,6 +23,7 @@ SPEC REPOS:
     - MBProgressHUD
     - PopupDialog
     - SnapKit
+    - SwiftyJSON
 
 EXTERNAL SOURCES:
   Swifter:
@@ -38,7 +41,8 @@ SPEC CHECKSUMS:
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Swifter: 114bb57823fb21d5ef0451930e9cbc184c3a867a
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 0c6a2142adbff6b71767d7cd1711dd917adb2f46
+PODFILE CHECKSUM: b03879762680b0c2501969a002159be1b1338e2e
 
 COCOAPODS: 1.9.0.beta.3
