@@ -13,19 +13,19 @@
 		CC4343AA23F90C8700A2D00D /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4343A923F90C8700A2D00D /* File.swift */; };
 		CC68F36023F947E800484216 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F35F23F947E800484216 /* Shared.swift */; };
 		CC68F36223F947EE00484216 /* ToneAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F36123F947EE00484216 /* ToneAnalyzer.swift */; };
-		CC68F36F23F947F600484216 /* ToneChatScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F36323F947F500484216 /* ToneChatScore.swift */; };
-		CC68F37023F947F600484216 /* UtteranceAnalyses.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F36423F947F500484216 /* UtteranceAnalyses.swift */; };
-		CC68F37123F947F600484216 /* ToneScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F36523F947F500484216 /* ToneScore.swift */; };
-		CC68F37223F947F600484216 /* SentenceAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F36623F947F500484216 /* SentenceAnalysis.swift */; };
-		CC68F37323F947F600484216 /* ToneInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F36723F947F500484216 /* ToneInput.swift */; };
-		CC68F37423F947F600484216 /* Utterance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F36823F947F500484216 /* Utterance.swift */; };
-		CC68F37523F947F600484216 /* ToneChatInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F36923F947F500484216 /* ToneChatInput.swift */; };
-		CC68F37623F947F600484216 /* DocumentAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F36A23F947F500484216 /* DocumentAnalysis.swift */; };
-		CC68F37723F947F600484216 /* ToneAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F36B23F947F500484216 /* ToneAnalysis.swift */; };
-		CC68F37823F947F600484216 /* ToneContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F36C23F947F500484216 /* ToneContent.swift */; };
-		CC68F37923F947F600484216 /* ToneCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F36D23F947F500484216 /* ToneCategory.swift */; };
-		CC68F37A23F947F600484216 /* UtteranceAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F36E23F947F600484216 /* UtteranceAnalysis.swift */; };
 		CC68F37C23F9485600484216 /* InsecureConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F37B23F9485600484216 /* InsecureConnection.swift */; };
+		CC68F38023F94D0100484216 /* DocumentAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F37F23F94D0100484216 /* DocumentAnalysis.swift */; };
+		CC68F38223F94D1800484216 /* SentenceAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F38123F94D1800484216 /* SentenceAnalysis.swift */; };
+		CC68F38423F94D3D00484216 /* ToneAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F38323F94D3D00484216 /* ToneAnalysis.swift */; };
+		CC68F38623F94D6000484216 /* ToneCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F38523F94D6000484216 /* ToneCategory.swift */; };
+		CC68F38823F94D7A00484216 /* ToneChatInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F38723F94D7A00484216 /* ToneChatInput.swift */; };
+		CC68F38A23F94D9900484216 /* ToneChatScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F38923F94D9900484216 /* ToneChatScore.swift */; };
+		CC68F38C23F94DBC00484216 /* ToneContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F38B23F94DBC00484216 /* ToneContent.swift */; };
+		CC68F38E23F94DEC00484216 /* ToneInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F38D23F94DEC00484216 /* ToneInput.swift */; };
+		CC68F39023F94E0500484216 /* ToneScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F38F23F94E0500484216 /* ToneScore.swift */; };
+		CC68F39223F94E2200484216 /* Utterance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F39123F94E2200484216 /* Utterance.swift */; };
+		CC68F39423F94E3900484216 /* UtteranceAnalyses.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F39323F94E3900484216 /* UtteranceAnalyses.swift */; };
+		CC68F39623F94E5700484216 /* UtteranceAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F39523F94E5700484216 /* UtteranceAnalysis.swift */; };
 		CC8D87E723F77C270098E0D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D87E623F77C270098E0D5 /* AppDelegate.swift */; };
 		CC8D87EB23F77C270098E0D5 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D87EA23F77C270098E0D5 /* MainVC.swift */; };
 		CC8D87EE23F77C270098E0D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8D87EC23F77C270098E0D5 /* Main.storyboard */; };
@@ -52,19 +52,19 @@
 		CC4343A923F90C8700A2D00D /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		CC68F35F23F947E800484216 /* Shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shared.swift; path = "../../../../../../../Downloads/swift-sdk-master/Source/ToneAnalyzerV3/Shared.swift"; sourceTree = "<group>"; };
 		CC68F36123F947EE00484216 /* ToneAnalyzer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToneAnalyzer.swift; path = "../../../../../../../Downloads/swift-sdk-master/Source/ToneAnalyzerV3/ToneAnalyzer.swift"; sourceTree = "<group>"; };
-		CC68F36323F947F500484216 /* ToneChatScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToneChatScore.swift; path = "../../../../../../../Downloads/swift-sdk-master/Source/ToneAnalyzerV3/Models/ToneChatScore.swift"; sourceTree = "<group>"; };
-		CC68F36423F947F500484216 /* UtteranceAnalyses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UtteranceAnalyses.swift; path = "../../../../../../../Downloads/swift-sdk-master/Source/ToneAnalyzerV3/Models/UtteranceAnalyses.swift"; sourceTree = "<group>"; };
-		CC68F36523F947F500484216 /* ToneScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToneScore.swift; path = "../../../../../../../Downloads/swift-sdk-master/Source/ToneAnalyzerV3/Models/ToneScore.swift"; sourceTree = "<group>"; };
-		CC68F36623F947F500484216 /* SentenceAnalysis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SentenceAnalysis.swift; path = "../../../../../../../Downloads/swift-sdk-master/Source/ToneAnalyzerV3/Models/SentenceAnalysis.swift"; sourceTree = "<group>"; };
-		CC68F36723F947F500484216 /* ToneInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToneInput.swift; path = "../../../../../../../Downloads/swift-sdk-master/Source/ToneAnalyzerV3/Models/ToneInput.swift"; sourceTree = "<group>"; };
-		CC68F36823F947F500484216 /* Utterance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utterance.swift; path = "../../../../../../../Downloads/swift-sdk-master/Source/ToneAnalyzerV3/Models/Utterance.swift"; sourceTree = "<group>"; };
-		CC68F36923F947F500484216 /* ToneChatInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToneChatInput.swift; path = "../../../../../../../Downloads/swift-sdk-master/Source/ToneAnalyzerV3/Models/ToneChatInput.swift"; sourceTree = "<group>"; };
-		CC68F36A23F947F500484216 /* DocumentAnalysis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DocumentAnalysis.swift; path = "../../../../../../../Downloads/swift-sdk-master/Source/ToneAnalyzerV3/Models/DocumentAnalysis.swift"; sourceTree = "<group>"; };
-		CC68F36B23F947F500484216 /* ToneAnalysis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToneAnalysis.swift; path = "../../../../../../../Downloads/swift-sdk-master/Source/ToneAnalyzerV3/Models/ToneAnalysis.swift"; sourceTree = "<group>"; };
-		CC68F36C23F947F500484216 /* ToneContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToneContent.swift; path = "../../../../../../../Downloads/swift-sdk-master/Source/ToneAnalyzerV3/Models/ToneContent.swift"; sourceTree = "<group>"; };
-		CC68F36D23F947F500484216 /* ToneCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToneCategory.swift; path = "../../../../../../../Downloads/swift-sdk-master/Source/ToneAnalyzerV3/Models/ToneCategory.swift"; sourceTree = "<group>"; };
-		CC68F36E23F947F600484216 /* UtteranceAnalysis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UtteranceAnalysis.swift; path = "../../../../../../../Downloads/swift-sdk-master/Source/ToneAnalyzerV3/Models/UtteranceAnalysis.swift"; sourceTree = "<group>"; };
 		CC68F37B23F9485600484216 /* InsecureConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InsecureConnection.swift; path = "../../../../../../../Downloads/swift-sdk-master/Source/SupportingFiles/InsecureConnection.swift"; sourceTree = "<group>"; };
+		CC68F37F23F94D0100484216 /* DocumentAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentAnalysis.swift; sourceTree = "<group>"; };
+		CC68F38123F94D1800484216 /* SentenceAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceAnalysis.swift; sourceTree = "<group>"; };
+		CC68F38323F94D3D00484216 /* ToneAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToneAnalysis.swift; sourceTree = "<group>"; };
+		CC68F38523F94D6000484216 /* ToneCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToneCategory.swift; sourceTree = "<group>"; };
+		CC68F38723F94D7A00484216 /* ToneChatInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToneChatInput.swift; sourceTree = "<group>"; };
+		CC68F38923F94D9900484216 /* ToneChatScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToneChatScore.swift; sourceTree = "<group>"; };
+		CC68F38B23F94DBC00484216 /* ToneContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToneContent.swift; sourceTree = "<group>"; };
+		CC68F38D23F94DEC00484216 /* ToneInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToneInput.swift; sourceTree = "<group>"; };
+		CC68F38F23F94E0500484216 /* ToneScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToneScore.swift; sourceTree = "<group>"; };
+		CC68F39123F94E2200484216 /* Utterance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utterance.swift; sourceTree = "<group>"; };
+		CC68F39323F94E3900484216 /* UtteranceAnalyses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtteranceAnalyses.swift; sourceTree = "<group>"; };
+		CC68F39523F94E5700484216 /* UtteranceAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtteranceAnalysis.swift; sourceTree = "<group>"; };
 		CC8D87E323F77C270098E0D5 /* TweetSense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetSense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8D87E623F77C270098E0D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC8D87EA23F77C270098E0D5 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -107,21 +107,21 @@
 		CC68F35E23F947BB00484216 /* Watson */ = {
 			isa = PBXGroup;
 			children = (
-				CC68F36A23F947F500484216 /* DocumentAnalysis.swift */,
-				CC68F36623F947F500484216 /* SentenceAnalysis.swift */,
-				CC68F36B23F947F500484216 /* ToneAnalysis.swift */,
-				CC68F36D23F947F500484216 /* ToneCategory.swift */,
 				CC68F37B23F9485600484216 /* InsecureConnection.swift */,
-				CC68F36923F947F500484216 /* ToneChatInput.swift */,
-				CC68F36323F947F500484216 /* ToneChatScore.swift */,
-				CC68F36C23F947F500484216 /* ToneContent.swift */,
-				CC68F36723F947F500484216 /* ToneInput.swift */,
-				CC68F36523F947F500484216 /* ToneScore.swift */,
-				CC68F36823F947F500484216 /* Utterance.swift */,
-				CC68F36423F947F500484216 /* UtteranceAnalyses.swift */,
-				CC68F36E23F947F600484216 /* UtteranceAnalysis.swift */,
 				CC68F35F23F947E800484216 /* Shared.swift */,
 				CC68F36123F947EE00484216 /* ToneAnalyzer.swift */,
+				CC68F37F23F94D0100484216 /* DocumentAnalysis.swift */,
+				CC68F38123F94D1800484216 /* SentenceAnalysis.swift */,
+				CC68F38323F94D3D00484216 /* ToneAnalysis.swift */,
+				CC68F38523F94D6000484216 /* ToneCategory.swift */,
+				CC68F38723F94D7A00484216 /* ToneChatInput.swift */,
+				CC68F38923F94D9900484216 /* ToneChatScore.swift */,
+				CC68F38B23F94DBC00484216 /* ToneContent.swift */,
+				CC68F38D23F94DEC00484216 /* ToneInput.swift */,
+				CC68F38F23F94E0500484216 /* ToneScore.swift */,
+				CC68F39123F94E2200484216 /* Utterance.swift */,
+				CC68F39323F94E3900484216 /* UtteranceAnalyses.swift */,
+				CC68F39523F94E5700484216 /* UtteranceAnalysis.swift */,
 			);
 			path = Watson;
 			sourceTree = "<group>";
@@ -344,35 +344,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC68F39223F94E2200484216 /* Utterance.swift in Sources */,
 				CC68F37C23F9485600484216 /* InsecureConnection.swift in Sources */,
 				CC68F36023F947E800484216 /* Shared.swift in Sources */,
-				CC68F37723F947F600484216 /* ToneAnalysis.swift in Sources */,
-				CC68F37023F947F600484216 /* UtteranceAnalyses.swift in Sources */,
-				CC68F37323F947F600484216 /* ToneInput.swift in Sources */,
+				CC68F38023F94D0100484216 /* DocumentAnalysis.swift in Sources */,
 				CC8D882323F8BA6C0098E0D5 /* UIImageView+Extensions.swift in Sources */,
 				CC4343A823F8F2C800A2D00D /* String+Extensions.swift in Sources */,
 				CC8D87EB23F77C270098E0D5 /* MainVC.swift in Sources */,
+				CC68F38623F94D6000484216 /* ToneCategory.swift in Sources */,
 				CC8D87FF23F77EAB0098E0D5 /* MainView.swift in Sources */,
+				CC68F38C23F94DBC00484216 /* ToneContent.swift in Sources */,
 				CC8D880F23F86EDD0098E0D5 /* AnalysisUtils.swift in Sources */,
 				CC8D882123F89CE90098E0D5 /* Tweet.swift in Sources */,
-				CC68F37423F947F600484216 /* Utterance.swift in Sources */,
+				CC68F38223F94D1800484216 /* SentenceAnalysis.swift in Sources */,
+				CC68F38423F94D3D00484216 /* ToneAnalysis.swift in Sources */,
+				CC68F38E23F94DEC00484216 /* ToneInput.swift in Sources */,
+				CC68F39023F94E0500484216 /* ToneScore.swift in Sources */,
 				CC8D880623F7B45D0098E0D5 /* UIView+Extensions.swift in Sources */,
 				CC8D881823F880A80098E0D5 /* TwitterCredentials.swift in Sources */,
-				CC68F37223F947F600484216 /* SentenceAnalysis.swift in Sources */,
 				CC68F36223F947EE00484216 /* ToneAnalyzer.swift in Sources */,
+				CC68F38A23F94D9900484216 /* ToneChatScore.swift in Sources */,
+				CC68F39623F94E5700484216 /* UtteranceAnalysis.swift in Sources */,
 				CC8D87E723F77C270098E0D5 /* AppDelegate.swift in Sources */,
-				CC68F36F23F947F600484216 /* ToneChatScore.swift in Sources */,
+				CC68F39423F94E3900484216 /* UtteranceAnalyses.swift in Sources */,
 				CC4343AA23F90C8700A2D00D /* File.swift in Sources */,
 				CC8D880123F798D00098E0D5 /* Constants.swift in Sources */,
 				CC8D882523F8C6110098E0D5 /* ProfileVC.swift in Sources */,
+				CC68F38823F94D7A00484216 /* ToneChatInput.swift in Sources */,
 				CC4343A623F8EF0600A2D00D /* AnalysisPage.swift in Sources */,
-				CC68F37A23F947F600484216 /* UtteranceAnalysis.swift in Sources */,
-				CC68F37623F947F600484216 /* DocumentAnalysis.swift in Sources */,
-				CC68F37923F947F600484216 /* ToneCategory.swift in Sources */,
-				CC68F37523F947F600484216 /* ToneChatInput.swift in Sources */,
-				CC68F37123F947F600484216 /* ToneScore.swift in Sources */,
 				CC8D880A23F7C0EE0098E0D5 /* SearchVC.swift in Sources */,
-				CC68F37823F947F600484216 /* ToneContent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

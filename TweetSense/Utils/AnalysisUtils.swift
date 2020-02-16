@@ -11,14 +11,7 @@ import Foundation
 
 public class AnalysisUtils {
     static let shared = AnalysisUtils()
-    
-//    let toneAnalyzer = ToneAnalyzer(
-//        username: "your-username-here",
-//        password: "your-password-here",
-//        version: "yyyy-mm-dd"
-//    )
-//    toneAnalyzer.serviceURL = "https://gateway-fra.watsonplatform.net/tone-analyzer/api"
-    
+    var analyzedCategoriesArray: [ToneCategory] = []
     
     func callWatson() {
         
@@ -37,6 +30,7 @@ I'm worried my #ThisPhone is going to overheat like my brother's did.
         let toneAnalyzer = ToneAnalyzer(version: "2020-02-15", authenticator: WatsonBasicAuthenticator(username: "apikey", password: "OiiD65lKNoiE0kBdlApvIi4uE66hmxqKlF5qxwG4pl-J"))
 
         let input = ToneInput(text: inputText)
+      
         toneAnalyzer.tone(toneContent: .toneInput(input)) { response, error in
             if let error = error {
                 print(error)
@@ -45,7 +39,25 @@ I'm worried my #ThisPhone is going to overheat like my brother's did.
                 print("Failed to analyze the tone input")
                 return
             }
+            self.analyzedCategoriesArray = []
+//            guard let categories = tones.documentTone.toneCategories else {
+//                print("error fuck")
+//                return
+//            }
             print(tones)
+//
+//            // Loop through document tones
+//            for documentTone in categories {
+//                // Set tone category parameters
+//                let toneCategoryId = documentTone.categoryID
+//                let toneCategoryName = documentTone.categoryName
+//                let tones = documentTone.tones
+//                // Create new tone category with information provided by document tone
+//                let newToneCategory = try! JSONDecoder().decode(ToneCategory.self, from: response)
+//                // Add new tone category to array
+//                self.analyzedCategoriesArray.append(newToneCategory)
+//            }
+            
         }
     }
 
