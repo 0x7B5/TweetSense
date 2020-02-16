@@ -16,26 +16,61 @@ class SearchVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var tweetTF: UITextField!
     @IBOutlet weak var coveringView: UIView!
+    private var usernamePrefix = NSMutableAttributedString(string: "@")
     
     //Buttons
-    
     @IBOutlet weak var userButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tweetTF.delegate = self
+        setupUI()
+    }
+    
+    func setupUI() {
         setupTextfield()
         userButton.roundDatHoe()
         userButton.addBorder()
-        
-        tweetTF.delegate = self
+        if (Constants.userSearch == true) {
+            makePrefix()
+        }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tweetTF.becomeFirstResponder()
+
+    }
     
-    func tweetTFShouldReturn(_ tweetTF: UITextField) -> Bool {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        //This makes the new text black.
+        tweetTF.typingAttributes = [NSAttributedString.Key.foregroundColor:UIColor.black]
+        let protectedRange = NSMakeRange(0, 1)
+        let intersection = NSIntersectionRange(protectedRange, range)
+        if intersection.length > 0 {
+            return false
+        }
+        return true
+    }
+    
+    func makePrefix() {
+        let attributedString = NSMutableAttributedString(string: "@")
+        attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.lightGray, range: NSMakeRange(0,1))
+        tweetTF.attributedText = attributedString
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         tweetTF.resignFirstResponder()
+        print("return return")
         handleText()
         return true
     }
+    
+    
+    @IBAction func analyzeButtonPressed(_ sender: Any) {
+        handleText()
+    }
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -44,10 +79,15 @@ class SearchVC: UIViewController, UITextFieldDelegate {
     func handleText() {
         if tweetTF.text != nil && tweetTF.text != "" {
             let tempText = tweetTF.text!
+            print(tempText)
             if (Constants.userSearch == false) {
-                
+                getTopicTweets(topic: tempText, completion: { tweets in
+                    self.performSegue(withIdentifier: "toProfile", sender: self)
+                })
             } else {
-                getUserTweets(username: tempText, completion: { tweets in
+                let newTempText = tempText.substring(from: 1)
+                print(newTempText)
+                getUserTweets(username: newTempText, completion: { tweets in
                     self.performSegue(withIdentifier: "toProfile", sender: self)
                 })
             }
@@ -99,8 +139,39 @@ class SearchVC: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func makePrefix() {
+    func getTopicTweets(topic: String, completion: @escaping ([Tweet]?) -> ()) {
+        let loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
+        loadingNotification.mode = MBProgressHUDMode.indeterminate
+        loadingNotification.label.text = "Fetching Tweets"
         
+        if let url = URL(string:("https://tweetsense-268300.appspot.com/topic/"+topic)) {
+            URLSession.shared.dataTask(with: url) { data, response, error in
+                guard let data = data else { return }
+                do {
+                    var userTweets = [Tweet]()
+                    let json = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]]
+                    //print(json)
+                    
+                    for i in json! {
+                        let itemDate = i["Date"] as! String
+                        let itemText = i["Text"] as! String
+                        userTweets.append(Tweet(date: itemDate, text: itemText))
+                    }
+                    
+                    print(userTweets)
+                    DispatchQueue.main.async { () -> Void in
+                        loadingNotification.hide(animated: true)
+                        completion(userTweets)
+                    }
+                } catch let parsingError {
+                    print("Error", parsingError)
+                    DispatchQueue.main.async { () -> Void in
+                        loadingNotification.hide(animated: true)
+                        completion(nil)
+                    }
+                }
+            }.resume()
+        }
     }
     
     func setupTextfield() {
@@ -119,7 +190,7 @@ class SearchVC: UIViewController, UITextFieldDelegate {
         tweetTF.textAlignment = .center
         tweetTF.autocorrectionType = UITextAutocorrectionType.no
         tweetTF.keyboardType = UIKeyboardType.default
-        tweetTF.returnKeyType = UIReturnKeyType.done
+        //tweetTF.returnKeyType = UIReturnKeyType.done
         tweetTF.clearButtonMode = UITextField.ViewMode.whileEditing
         tweetTF.autocapitalizationType = .none
         tweetTF.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center

@@ -12,14 +12,22 @@ import PopupDialog
 class MainVC: UIViewController {
     @IBOutlet var viewCollection: [UIView]!
     
+    @IBOutlet weak var mainButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+    }
+    
+    func setupUI() {
         for i in viewCollection {
             i.roundIt()
-           
         }
+        mainButton.setImage(UIImage(named: "plus"), for: .normal)
     }
+    
+    
 
     @IBAction func addButtonPressed(_ sender: Any) {
         // Prepare the popup assets
