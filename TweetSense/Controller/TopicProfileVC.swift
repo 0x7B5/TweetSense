@@ -1,8 +1,8 @@
 //
-//  ProfileVC.swift
+//  TopicProfileVC.swift
 //  TweetSense
 //
-//  Created by Vlad Munteanu on 2/15/20.
+//  Created by Vlad Munteanu on 2/16/20.
 //  Copyright © 2020 Vlad Munteanu. All rights reserved.
 //
 
@@ -10,19 +10,22 @@ import Foundation
 import UIKit
 import PopupDialog
 
-class ProfileVC: UIViewController {
-    
-    var twitterProfilePicture: UIImage?
-    
-    let currentUser: AnalysisPage? = nil
+class TopicProfileVC: UIViewController {
     
     
-    @IBOutlet weak var profileUsername: UILabel!
-    @IBOutlet weak var profileSenseScore: UILabel!
+    
+    @IBOutlet weak var topicProfilePicture: UIImageView!
+    @IBOutlet weak var topicName: UILabel!
+    @IBOutlet weak var topicSenseScore: UILabel!
     
     
-    @IBOutlet weak var profilePicture: UIImageView!
-    @IBOutlet var viewCollection: [UIView]!
+    
+    
+    
+    
+    let currentTopic: AnalysisPage? = nil
+    
+    
     /*
      **TAG GUIDE*
      Sentiment View
@@ -50,7 +53,7 @@ class ProfileVC: UIViewController {
      */
     
     override func viewWillAppear(_ animated: Bool) {
-        if (currentUser == nil) {
+        if (currentTopic == nil) {
             errorMessage()
         }
         
@@ -58,16 +61,10 @@ class ProfileVC: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (currentUser == nil) {
+        if (currentTopic == nil) {
             errorMessage()
         }
     }
-    
-    
-    @IBAction func backbuttonPressed(_ sender: Any) {
-        triggerAlert()
-    }
-    
     
     func triggerAlert() {
         // Prepare the popup assets
@@ -98,16 +95,13 @@ class ProfileVC: UIViewController {
         // Present dialog
         self.present(popup, animated: true, completion: nil)
     }
-    func setupUI() {
-        profilePicture.setRounded()
-        for i in viewCollection {
-            i.roundIt()
-            // i.dropShadow()
-        }
-    }
     
-    func setupColors() {
-        
+    func setupUI() {
+        topicProfilePicture.setRounded()
+//        for i in viewCollection {
+//            i.roundIt()
+//            // i.dropShadow()
+//        }
     }
     
     func errorMessage() {
@@ -129,7 +123,7 @@ class ProfileVC: UIViewController {
         
         // Present dialog
         self.present(popup, animated: true, completion: {
-             self.performSegue(withIdentifier: "backHomeFrom", sender: self)
+            self.performSegue(withIdentifier: "backHomeFrom", sender: self)
         })
     }
     

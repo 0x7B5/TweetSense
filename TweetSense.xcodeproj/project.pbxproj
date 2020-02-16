@@ -26,6 +26,66 @@
 		CC68F39223F94E2200484216 /* Utterance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F39123F94E2200484216 /* Utterance.swift */; };
 		CC68F39423F94E3900484216 /* UtteranceAnalyses.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F39323F94E3900484216 /* UtteranceAnalyses.swift */; };
 		CC68F39623F94E5700484216 /* UtteranceAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F39523F94E5700484216 /* UtteranceAnalysis.swift */; };
+		CC68F39823F9514E00484216 /* TopicProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F39723F9514E00484216 /* TopicProfileVC.swift */; };
+		CC68F3AD23F952C500484216 /* ConsumptionPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3A423F952C500484216 /* ConsumptionPreferences.swift */; };
+		CC68F3AE23F952C500484216 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3A523F952C500484216 /* Profile.swift */; };
+		CC68F3AF23F952C500484216 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3A623F952C500484216 /* Content.swift */; };
+		CC68F3B023F952C500484216 /* ContentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3A723F952C500484216 /* ContentItem.swift */; };
+		CC68F3B123F952C500484216 /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3A823F952C500484216 /* Behavior.swift */; };
+		CC68F3B223F952C500484216 /* ProfileContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3A923F952C500484216 /* ProfileContent.swift */; };
+		CC68F3B323F952C500484216 /* Warning.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3AA23F952C500484216 /* Warning.swift */; };
+		CC68F3B423F952C500484216 /* ConsumptionPreferencesCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3AB23F952C500484216 /* ConsumptionPreferencesCategory.swift */; };
+		CC68F3B523F952C500484216 /* Trait.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3AC23F952C500484216 /* Trait.swift */; };
+		CC68F3E923F954D100484216 /* TargetedSentimentResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3B723F954CB00484216 /* TargetedSentimentResults.swift */; };
+		CC68F3EA23F954D100484216 /* TokenResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3B823F954CB00484216 /* TokenResult.swift */; };
+		CC68F3EB23F954D100484216 /* SentenceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3B923F954CB00484216 /* SentenceResult.swift */; };
+		CC68F3EC23F954D100484216 /* AnalysisResultsUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3BA23F954CC00484216 /* AnalysisResultsUsage.swift */; };
+		CC68F3ED23F954D100484216 /* CategoriesResultExplanation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3BB23F954CC00484216 /* CategoriesResultExplanation.swift */; };
+		CC68F3EE23F954D100484216 /* DisambiguationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3BC23F954CC00484216 /* DisambiguationResult.swift */; };
+		CC68F3EF23F954D100484216 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3BD23F954CC00484216 /* Parameters.swift */; };
+		CC68F3F023F954D100484216 /* SentimentOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3BE23F954CC00484216 /* SentimentOptions.swift */; };
+		CC68F3F123F954D100484216 /* SemanticRolesResultSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3BF23F954CC00484216 /* SemanticRolesResultSubject.swift */; };
+		CC68F3F223F954D100484216 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3C023F954CC00484216 /* Feed.swift */; };
+		CC68F3F323F954D100484216 /* SyntaxOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3C123F954CC00484216 /* SyntaxOptions.swift */; };
+		CC68F3F423F954D100484216 /* RelationArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3C223F954CC00484216 /* RelationArgument.swift */; };
+		CC68F3F523F954D100484216 /* SemanticRolesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3C323F954CC00484216 /* SemanticRolesEntity.swift */; };
+		CC68F3F623F954D100484216 /* KeywordsOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3C423F954CD00484216 /* KeywordsOptions.swift */; };
+		CC68F3F723F954D100484216 /* ConceptsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3C523F954CD00484216 /* ConceptsResult.swift */; };
+		CC68F3F823F954D100484216 /* RelationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3C623F954CD00484216 /* RelationEntity.swift */; };
+		CC68F3F923F954D100484216 /* EmotionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3C723F954CD00484216 /* EmotionResult.swift */; };
+		CC68F3FA23F954D100484216 /* SemanticRolesKeyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3C823F954CD00484216 /* SemanticRolesKeyword.swift */; };
+		CC68F3FB23F954D100484216 /* ListModelsResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3C923F954CD00484216 /* ListModelsResults.swift */; };
+		CC68F3FC23F954D100484216 /* TargetedEmotionResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3CA23F954CD00484216 /* TargetedEmotionResults.swift */; };
+		CC68F3FD23F954D100484216 /* RelationsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3CB23F954CD00484216 /* RelationsResult.swift */; };
+		CC68F3FE23F954D100484216 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3CC23F954CE00484216 /* Model.swift */; };
+		CC68F3FF23F954D100484216 /* SemanticRolesResultObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3CD23F954CE00484216 /* SemanticRolesResultObject.swift */; };
+		CC68F40023F954D100484216 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3CE23F954CE00484216 /* Author.swift */; };
+		CC68F40123F954D100484216 /* SyntaxOptionsTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3CF23F954CE00484216 /* SyntaxOptionsTokens.swift */; };
+		CC68F40223F954D100484216 /* SemanticRolesVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3D023F954CE00484216 /* SemanticRolesVerb.swift */; };
+		CC68F40323F954D100484216 /* CategoriesOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3D123F954CE00484216 /* CategoriesOptions.swift */; };
+		CC68F40423F954D100484216 /* DocumentSentimentResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3D223F954CE00484216 /* DocumentSentimentResults.swift */; };
+		CC68F40523F954D100484216 /* EntitiesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3D323F954CE00484216 /* EntitiesResult.swift */; };
+		CC68F40623F954D100484216 /* EntitiesOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3D423F954CF00484216 /* EntitiesOptions.swift */; };
+		CC68F40723F954D100484216 /* SemanticRolesOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3D523F954CF00484216 /* SemanticRolesOptions.swift */; };
+		CC68F40823F954D100484216 /* MetadataOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3D623F954CF00484216 /* MetadataOptions.swift */; };
+		CC68F40923F954D100484216 /* ConceptsOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3D723F954CF00484216 /* ConceptsOptions.swift */; };
+		CC68F40A23F954D100484216 /* SentimentResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3D823F954CF00484216 /* SentimentResult.swift */; };
+		CC68F40B23F954D100484216 /* AnalysisResultsMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3D923F954CF00484216 /* AnalysisResultsMetadata.swift */; };
+		CC68F40C23F954D100484216 /* EntityMention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3DA23F954CF00484216 /* EntityMention.swift */; };
+		CC68F40D23F954D100484216 /* DeleteModelResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3DB23F954D000484216 /* DeleteModelResults.swift */; };
+		CC68F40E23F954D100484216 /* SemanticRolesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3DC23F954D000484216 /* SemanticRolesResult.swift */; };
+		CC68F40F23F954D100484216 /* FeatureSentimentResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3DD23F954D000484216 /* FeatureSentimentResults.swift */; };
+		CC68F41023F954D100484216 /* RelationsOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3DE23F954D000484216 /* RelationsOptions.swift */; };
+		CC68F41123F954D100484216 /* CategoriesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3DF23F954D000484216 /* CategoriesResult.swift */; };
+		CC68F41223F954D100484216 /* EmotionScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3E023F954D000484216 /* EmotionScores.swift */; };
+		CC68F41323F954D100484216 /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3E123F954D000484216 /* Features.swift */; };
+		CC68F41423F954D100484216 /* SyntaxResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3E223F954D000484216 /* SyntaxResult.swift */; };
+		CC68F41523F954D100484216 /* DocumentEmotionResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3E323F954D100484216 /* DocumentEmotionResults.swift */; };
+		CC68F41623F954D100484216 /* SemanticRolesResultAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3E423F954D100484216 /* SemanticRolesResultAction.swift */; };
+		CC68F41723F954D100484216 /* EmotionOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3E523F954D100484216 /* EmotionOptions.swift */; };
+		CC68F41823F954D100484216 /* AnalysisResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3E623F954D100484216 /* AnalysisResults.swift */; };
+		CC68F41923F954D100484216 /* CategoriesRelevantText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3E723F954D100484216 /* CategoriesRelevantText.swift */; };
+		CC68F41A23F954D100484216 /* KeywordsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3E823F954D100484216 /* KeywordsResult.swift */; };
 		CC8D87E723F77C270098E0D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D87E623F77C270098E0D5 /* AppDelegate.swift */; };
 		CC8D87EB23F77C270098E0D5 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D87EA23F77C270098E0D5 /* MainVC.swift */; };
 		CC8D87EE23F77C270098E0D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8D87EC23F77C270098E0D5 /* Main.storyboard */; };
@@ -40,7 +100,7 @@
 		CC8D881823F880A80098E0D5 /* TwitterCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D881723F880A80098E0D5 /* TwitterCredentials.swift */; };
 		CC8D882123F89CE90098E0D5 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D882023F89CE90098E0D5 /* Tweet.swift */; };
 		CC8D882323F8BA6C0098E0D5 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D882223F8BA6C0098E0D5 /* UIImageView+Extensions.swift */; };
-		CC8D882523F8C6110098E0D5 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D882423F8C6110098E0D5 /* ProfileVC.swift */; };
+		CC8D882523F8C6110098E0D5 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D882423F8C6110098E0D5 /* UserProfileVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +125,66 @@
 		CC68F39123F94E2200484216 /* Utterance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utterance.swift; sourceTree = "<group>"; };
 		CC68F39323F94E3900484216 /* UtteranceAnalyses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtteranceAnalyses.swift; sourceTree = "<group>"; };
 		CC68F39523F94E5700484216 /* UtteranceAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtteranceAnalysis.swift; sourceTree = "<group>"; };
+		CC68F39723F9514E00484216 /* TopicProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicProfileVC.swift; sourceTree = "<group>"; };
+		CC68F3A423F952C500484216 /* ConsumptionPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConsumptionPreferences.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/PersonalityInsightsV3/Models/ConsumptionPreferences.swift"; sourceTree = "<group>"; };
+		CC68F3A523F952C500484216 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Profile.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/PersonalityInsightsV3/Models/Profile.swift"; sourceTree = "<group>"; };
+		CC68F3A623F952C500484216 /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Content.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/PersonalityInsightsV3/Models/Content.swift"; sourceTree = "<group>"; };
+		CC68F3A723F952C500484216 /* ContentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentItem.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/PersonalityInsightsV3/Models/ContentItem.swift"; sourceTree = "<group>"; };
+		CC68F3A823F952C500484216 /* Behavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Behavior.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/PersonalityInsightsV3/Models/Behavior.swift"; sourceTree = "<group>"; };
+		CC68F3A923F952C500484216 /* ProfileContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileContent.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/PersonalityInsightsV3/Models/ProfileContent.swift"; sourceTree = "<group>"; };
+		CC68F3AA23F952C500484216 /* Warning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Warning.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/PersonalityInsightsV3/Models/Warning.swift"; sourceTree = "<group>"; };
+		CC68F3AB23F952C500484216 /* ConsumptionPreferencesCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConsumptionPreferencesCategory.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/PersonalityInsightsV3/Models/ConsumptionPreferencesCategory.swift"; sourceTree = "<group>"; };
+		CC68F3AC23F952C500484216 /* Trait.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Trait.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/PersonalityInsightsV3/Models/Trait.swift"; sourceTree = "<group>"; };
+		CC68F3B723F954CB00484216 /* TargetedSentimentResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TargetedSentimentResults.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/TargetedSentimentResults.swift"; sourceTree = "<group>"; };
+		CC68F3B823F954CB00484216 /* TokenResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TokenResult.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/TokenResult.swift"; sourceTree = "<group>"; };
+		CC68F3B923F954CB00484216 /* SentenceResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SentenceResult.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/SentenceResult.swift"; sourceTree = "<group>"; };
+		CC68F3BA23F954CC00484216 /* AnalysisResultsUsage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnalysisResultsUsage.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/AnalysisResultsUsage.swift"; sourceTree = "<group>"; };
+		CC68F3BB23F954CC00484216 /* CategoriesResultExplanation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoriesResultExplanation.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/CategoriesResultExplanation.swift"; sourceTree = "<group>"; };
+		CC68F3BC23F954CC00484216 /* DisambiguationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DisambiguationResult.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/DisambiguationResult.swift"; sourceTree = "<group>"; };
+		CC68F3BD23F954CC00484216 /* Parameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Parameters.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/Parameters.swift"; sourceTree = "<group>"; };
+		CC68F3BE23F954CC00484216 /* SentimentOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SentimentOptions.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/SentimentOptions.swift"; sourceTree = "<group>"; };
+		CC68F3BF23F954CC00484216 /* SemanticRolesResultSubject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SemanticRolesResultSubject.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/SemanticRolesResultSubject.swift"; sourceTree = "<group>"; };
+		CC68F3C023F954CC00484216 /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Feed.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/Feed.swift"; sourceTree = "<group>"; };
+		CC68F3C123F954CC00484216 /* SyntaxOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SyntaxOptions.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/SyntaxOptions.swift"; sourceTree = "<group>"; };
+		CC68F3C223F954CC00484216 /* RelationArgument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RelationArgument.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/RelationArgument.swift"; sourceTree = "<group>"; };
+		CC68F3C323F954CC00484216 /* SemanticRolesEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SemanticRolesEntity.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/SemanticRolesEntity.swift"; sourceTree = "<group>"; };
+		CC68F3C423F954CD00484216 /* KeywordsOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeywordsOptions.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/KeywordsOptions.swift"; sourceTree = "<group>"; };
+		CC68F3C523F954CD00484216 /* ConceptsResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConceptsResult.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/ConceptsResult.swift"; sourceTree = "<group>"; };
+		CC68F3C623F954CD00484216 /* RelationEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RelationEntity.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/RelationEntity.swift"; sourceTree = "<group>"; };
+		CC68F3C723F954CD00484216 /* EmotionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmotionResult.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/EmotionResult.swift"; sourceTree = "<group>"; };
+		CC68F3C823F954CD00484216 /* SemanticRolesKeyword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SemanticRolesKeyword.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/SemanticRolesKeyword.swift"; sourceTree = "<group>"; };
+		CC68F3C923F954CD00484216 /* ListModelsResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListModelsResults.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/ListModelsResults.swift"; sourceTree = "<group>"; };
+		CC68F3CA23F954CD00484216 /* TargetedEmotionResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TargetedEmotionResults.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/TargetedEmotionResults.swift"; sourceTree = "<group>"; };
+		CC68F3CB23F954CD00484216 /* RelationsResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RelationsResult.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/RelationsResult.swift"; sourceTree = "<group>"; };
+		CC68F3CC23F954CE00484216 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/Model.swift"; sourceTree = "<group>"; };
+		CC68F3CD23F954CE00484216 /* SemanticRolesResultObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SemanticRolesResultObject.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/SemanticRolesResultObject.swift"; sourceTree = "<group>"; };
+		CC68F3CE23F954CE00484216 /* Author.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Author.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/Author.swift"; sourceTree = "<group>"; };
+		CC68F3CF23F954CE00484216 /* SyntaxOptionsTokens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SyntaxOptionsTokens.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/SyntaxOptionsTokens.swift"; sourceTree = "<group>"; };
+		CC68F3D023F954CE00484216 /* SemanticRolesVerb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SemanticRolesVerb.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/SemanticRolesVerb.swift"; sourceTree = "<group>"; };
+		CC68F3D123F954CE00484216 /* CategoriesOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoriesOptions.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/CategoriesOptions.swift"; sourceTree = "<group>"; };
+		CC68F3D223F954CE00484216 /* DocumentSentimentResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DocumentSentimentResults.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/DocumentSentimentResults.swift"; sourceTree = "<group>"; };
+		CC68F3D323F954CE00484216 /* EntitiesResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntitiesResult.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/EntitiesResult.swift"; sourceTree = "<group>"; };
+		CC68F3D423F954CF00484216 /* EntitiesOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntitiesOptions.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/EntitiesOptions.swift"; sourceTree = "<group>"; };
+		CC68F3D523F954CF00484216 /* SemanticRolesOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SemanticRolesOptions.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/SemanticRolesOptions.swift"; sourceTree = "<group>"; };
+		CC68F3D623F954CF00484216 /* MetadataOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MetadataOptions.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/MetadataOptions.swift"; sourceTree = "<group>"; };
+		CC68F3D723F954CF00484216 /* ConceptsOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConceptsOptions.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/ConceptsOptions.swift"; sourceTree = "<group>"; };
+		CC68F3D823F954CF00484216 /* SentimentResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SentimentResult.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/SentimentResult.swift"; sourceTree = "<group>"; };
+		CC68F3D923F954CF00484216 /* AnalysisResultsMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnalysisResultsMetadata.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/AnalysisResultsMetadata.swift"; sourceTree = "<group>"; };
+		CC68F3DA23F954CF00484216 /* EntityMention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntityMention.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/EntityMention.swift"; sourceTree = "<group>"; };
+		CC68F3DB23F954D000484216 /* DeleteModelResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeleteModelResults.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/DeleteModelResults.swift"; sourceTree = "<group>"; };
+		CC68F3DC23F954D000484216 /* SemanticRolesResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SemanticRolesResult.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/SemanticRolesResult.swift"; sourceTree = "<group>"; };
+		CC68F3DD23F954D000484216 /* FeatureSentimentResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeatureSentimentResults.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/FeatureSentimentResults.swift"; sourceTree = "<group>"; };
+		CC68F3DE23F954D000484216 /* RelationsOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RelationsOptions.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/RelationsOptions.swift"; sourceTree = "<group>"; };
+		CC68F3DF23F954D000484216 /* CategoriesResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoriesResult.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/CategoriesResult.swift"; sourceTree = "<group>"; };
+		CC68F3E023F954D000484216 /* EmotionScores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmotionScores.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/EmotionScores.swift"; sourceTree = "<group>"; };
+		CC68F3E123F954D000484216 /* Features.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Features.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/Features.swift"; sourceTree = "<group>"; };
+		CC68F3E223F954D000484216 /* SyntaxResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SyntaxResult.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/SyntaxResult.swift"; sourceTree = "<group>"; };
+		CC68F3E323F954D100484216 /* DocumentEmotionResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DocumentEmotionResults.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/DocumentEmotionResults.swift"; sourceTree = "<group>"; };
+		CC68F3E423F954D100484216 /* SemanticRolesResultAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SemanticRolesResultAction.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/SemanticRolesResultAction.swift"; sourceTree = "<group>"; };
+		CC68F3E523F954D100484216 /* EmotionOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmotionOptions.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/EmotionOptions.swift"; sourceTree = "<group>"; };
+		CC68F3E623F954D100484216 /* AnalysisResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnalysisResults.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/AnalysisResults.swift"; sourceTree = "<group>"; };
+		CC68F3E723F954D100484216 /* CategoriesRelevantText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoriesRelevantText.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/CategoriesRelevantText.swift"; sourceTree = "<group>"; };
+		CC68F3E823F954D100484216 /* KeywordsResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeywordsResult.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/KeywordsResult.swift"; sourceTree = "<group>"; };
 		CC8D87E323F77C270098E0D5 /* TweetSense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetSense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8D87E623F77C270098E0D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC8D87EA23F77C270098E0D5 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -81,7 +201,7 @@
 		CC8D881723F880A80098E0D5 /* TwitterCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterCredentials.swift; sourceTree = "<group>"; };
 		CC8D882023F89CE90098E0D5 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		CC8D882223F8BA6C0098E0D5 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
-		CC8D882423F8C6110098E0D5 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		CC8D882423F8C6110098E0D5 /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +227,19 @@
 		CC68F35E23F947BB00484216 /* Watson */ = {
 			isa = PBXGroup;
 			children = (
+				CC68F3B623F954B200484216 /* Natural Language */,
+				CC68F3A323F952B000484216 /* Personality */,
+				CC68F39923F9524F00484216 /* ToneAnalyzer */,
 				CC68F37B23F9485600484216 /* InsecureConnection.swift */,
 				CC68F35F23F947E800484216 /* Shared.swift */,
 				CC68F36123F947EE00484216 /* ToneAnalyzer.swift */,
+			);
+			path = Watson;
+			sourceTree = "<group>";
+		};
+		CC68F39923F9524F00484216 /* ToneAnalyzer */ = {
+			isa = PBXGroup;
+			children = (
 				CC68F37F23F94D0100484216 /* DocumentAnalysis.swift */,
 				CC68F38123F94D1800484216 /* SentenceAnalysis.swift */,
 				CC68F38323F94D3D00484216 /* ToneAnalysis.swift */,
@@ -123,7 +253,80 @@
 				CC68F39323F94E3900484216 /* UtteranceAnalyses.swift */,
 				CC68F39523F94E5700484216 /* UtteranceAnalysis.swift */,
 			);
-			path = Watson;
+			path = ToneAnalyzer;
+			sourceTree = "<group>";
+		};
+		CC68F3A323F952B000484216 /* Personality */ = {
+			isa = PBXGroup;
+			children = (
+				CC68F3A823F952C500484216 /* Behavior.swift */,
+				CC68F3A423F952C500484216 /* ConsumptionPreferences.swift */,
+				CC68F3AB23F952C500484216 /* ConsumptionPreferencesCategory.swift */,
+				CC68F3A623F952C500484216 /* Content.swift */,
+				CC68F3A723F952C500484216 /* ContentItem.swift */,
+				CC68F3A523F952C500484216 /* Profile.swift */,
+				CC68F3A923F952C500484216 /* ProfileContent.swift */,
+				CC68F3AC23F952C500484216 /* Trait.swift */,
+				CC68F3AA23F952C500484216 /* Warning.swift */,
+			);
+			path = Personality;
+			sourceTree = "<group>";
+		};
+		CC68F3B623F954B200484216 /* Natural Language */ = {
+			isa = PBXGroup;
+			children = (
+				CC68F3E623F954D100484216 /* AnalysisResults.swift */,
+				CC68F3D923F954CF00484216 /* AnalysisResultsMetadata.swift */,
+				CC68F3BA23F954CC00484216 /* AnalysisResultsUsage.swift */,
+				CC68F3CE23F954CE00484216 /* Author.swift */,
+				CC68F3D123F954CE00484216 /* CategoriesOptions.swift */,
+				CC68F3E723F954D100484216 /* CategoriesRelevantText.swift */,
+				CC68F3DF23F954D000484216 /* CategoriesResult.swift */,
+				CC68F3BB23F954CC00484216 /* CategoriesResultExplanation.swift */,
+				CC68F3D723F954CF00484216 /* ConceptsOptions.swift */,
+				CC68F3C523F954CD00484216 /* ConceptsResult.swift */,
+				CC68F3DB23F954D000484216 /* DeleteModelResults.swift */,
+				CC68F3BC23F954CC00484216 /* DisambiguationResult.swift */,
+				CC68F3E323F954D100484216 /* DocumentEmotionResults.swift */,
+				CC68F3D223F954CE00484216 /* DocumentSentimentResults.swift */,
+				CC68F3E523F954D100484216 /* EmotionOptions.swift */,
+				CC68F3C723F954CD00484216 /* EmotionResult.swift */,
+				CC68F3E023F954D000484216 /* EmotionScores.swift */,
+				CC68F3D423F954CF00484216 /* EntitiesOptions.swift */,
+				CC68F3D323F954CE00484216 /* EntitiesResult.swift */,
+				CC68F3DA23F954CF00484216 /* EntityMention.swift */,
+				CC68F3E123F954D000484216 /* Features.swift */,
+				CC68F3DD23F954D000484216 /* FeatureSentimentResults.swift */,
+				CC68F3C023F954CC00484216 /* Feed.swift */,
+				CC68F3C423F954CD00484216 /* KeywordsOptions.swift */,
+				CC68F3E823F954D100484216 /* KeywordsResult.swift */,
+				CC68F3C923F954CD00484216 /* ListModelsResults.swift */,
+				CC68F3D623F954CF00484216 /* MetadataOptions.swift */,
+				CC68F3CC23F954CE00484216 /* Model.swift */,
+				CC68F3BD23F954CC00484216 /* Parameters.swift */,
+				CC68F3C223F954CC00484216 /* RelationArgument.swift */,
+				CC68F3C623F954CD00484216 /* RelationEntity.swift */,
+				CC68F3DE23F954D000484216 /* RelationsOptions.swift */,
+				CC68F3CB23F954CD00484216 /* RelationsResult.swift */,
+				CC68F3C323F954CC00484216 /* SemanticRolesEntity.swift */,
+				CC68F3C823F954CD00484216 /* SemanticRolesKeyword.swift */,
+				CC68F3D523F954CF00484216 /* SemanticRolesOptions.swift */,
+				CC68F3DC23F954D000484216 /* SemanticRolesResult.swift */,
+				CC68F3E423F954D100484216 /* SemanticRolesResultAction.swift */,
+				CC68F3CD23F954CE00484216 /* SemanticRolesResultObject.swift */,
+				CC68F3BF23F954CC00484216 /* SemanticRolesResultSubject.swift */,
+				CC68F3D023F954CE00484216 /* SemanticRolesVerb.swift */,
+				CC68F3B923F954CB00484216 /* SentenceResult.swift */,
+				CC68F3BE23F954CC00484216 /* SentimentOptions.swift */,
+				CC68F3D823F954CF00484216 /* SentimentResult.swift */,
+				CC68F3C123F954CC00484216 /* SyntaxOptions.swift */,
+				CC68F3CF23F954CE00484216 /* SyntaxOptionsTokens.swift */,
+				CC68F3E223F954D000484216 /* SyntaxResult.swift */,
+				CC68F3CA23F954CD00484216 /* TargetedEmotionResults.swift */,
+				CC68F3B723F954CB00484216 /* TargetedSentimentResults.swift */,
+				CC68F3B823F954CB00484216 /* TokenResult.swift */,
+			);
+			path = "Natural Language";
 			sourceTree = "<group>";
 		};
 		CC8D87DA23F77C270098E0D5 = {
@@ -183,7 +386,8 @@
 			children = (
 				CC8D87EA23F77C270098E0D5 /* MainVC.swift */,
 				CC8D880923F7C0EE0098E0D5 /* SearchVC.swift */,
-				CC8D882423F8C6110098E0D5 /* ProfileVC.swift */,
+				CC8D882423F8C6110098E0D5 /* UserProfileVC.swift */,
+				CC68F39723F9514E00484216 /* TopicProfileVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -344,35 +548,95 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC68F41423F954D100484216 /* SyntaxResult.swift in Sources */,
 				CC68F39223F94E2200484216 /* Utterance.swift in Sources */,
 				CC68F37C23F9485600484216 /* InsecureConnection.swift in Sources */,
+				CC68F3FE23F954D100484216 /* Model.swift in Sources */,
+				CC68F41723F954D100484216 /* EmotionOptions.swift in Sources */,
+				CC68F40923F954D100484216 /* ConceptsOptions.swift in Sources */,
 				CC68F36023F947E800484216 /* Shared.swift in Sources */,
+				CC68F40D23F954D100484216 /* DeleteModelResults.swift in Sources */,
+				CC68F3F723F954D100484216 /* ConceptsResult.swift in Sources */,
+				CC68F3FC23F954D100484216 /* TargetedEmotionResults.swift in Sources */,
 				CC68F38023F94D0100484216 /* DocumentAnalysis.swift in Sources */,
+				CC68F3FF23F954D100484216 /* SemanticRolesResultObject.swift in Sources */,
+				CC68F41523F954D100484216 /* DocumentEmotionResults.swift in Sources */,
+				CC68F3B023F952C500484216 /* ContentItem.swift in Sources */,
 				CC8D882323F8BA6C0098E0D5 /* UIImageView+Extensions.swift in Sources */,
+				CC68F3FD23F954D100484216 /* RelationsResult.swift in Sources */,
+				CC68F3B123F952C500484216 /* Behavior.swift in Sources */,
+				CC68F40023F954D100484216 /* Author.swift in Sources */,
+				CC68F40C23F954D100484216 /* EntityMention.swift in Sources */,
+				CC68F41323F954D100484216 /* Features.swift in Sources */,
+				CC68F3F323F954D100484216 /* SyntaxOptions.swift in Sources */,
+				CC68F40323F954D100484216 /* CategoriesOptions.swift in Sources */,
+				CC68F41223F954D100484216 /* EmotionScores.swift in Sources */,
+				CC68F3EF23F954D100484216 /* Parameters.swift in Sources */,
 				CC4343A823F8F2C800A2D00D /* String+Extensions.swift in Sources */,
+				CC68F3FA23F954D100484216 /* SemanticRolesKeyword.swift in Sources */,
 				CC8D87EB23F77C270098E0D5 /* MainVC.swift in Sources */,
+				CC68F41123F954D100484216 /* CategoriesResult.swift in Sources */,
 				CC68F38623F94D6000484216 /* ToneCategory.swift in Sources */,
+				CC68F3F023F954D100484216 /* SentimentOptions.swift in Sources */,
+				CC68F40A23F954D100484216 /* SentimentResult.swift in Sources */,
+				CC68F3E923F954D100484216 /* TargetedSentimentResults.swift in Sources */,
 				CC8D87FF23F77EAB0098E0D5 /* MainView.swift in Sources */,
 				CC68F38C23F94DBC00484216 /* ToneContent.swift in Sources */,
 				CC8D880F23F86EDD0098E0D5 /* AnalysisUtils.swift in Sources */,
 				CC8D882123F89CE90098E0D5 /* Tweet.swift in Sources */,
+				CC68F3FB23F954D100484216 /* ListModelsResults.swift in Sources */,
+				CC68F3EC23F954D100484216 /* AnalysisResultsUsage.swift in Sources */,
+				CC68F40723F954D100484216 /* SemanticRolesOptions.swift in Sources */,
+				CC68F40123F954D100484216 /* SyntaxOptionsTokens.swift in Sources */,
+				CC68F3B423F952C500484216 /* ConsumptionPreferencesCategory.swift in Sources */,
 				CC68F38223F94D1800484216 /* SentenceAnalysis.swift in Sources */,
+				CC68F3B523F952C500484216 /* Trait.swift in Sources */,
+				CC68F41A23F954D100484216 /* KeywordsResult.swift in Sources */,
 				CC68F38423F94D3D00484216 /* ToneAnalysis.swift in Sources */,
+				CC68F3F923F954D100484216 /* EmotionResult.swift in Sources */,
+				CC68F3ED23F954D100484216 /* CategoriesResultExplanation.swift in Sources */,
+				CC68F3AF23F952C500484216 /* Content.swift in Sources */,
 				CC68F38E23F94DEC00484216 /* ToneInput.swift in Sources */,
 				CC68F39023F94E0500484216 /* ToneScore.swift in Sources */,
+				CC68F3F823F954D100484216 /* RelationEntity.swift in Sources */,
+				CC68F40423F954D100484216 /* DocumentSentimentResults.swift in Sources */,
+				CC68F41923F954D100484216 /* CategoriesRelevantText.swift in Sources */,
+				CC68F40223F954D100484216 /* SemanticRolesVerb.swift in Sources */,
 				CC8D880623F7B45D0098E0D5 /* UIView+Extensions.swift in Sources */,
+				CC68F40823F954D100484216 /* MetadataOptions.swift in Sources */,
+				CC68F41823F954D100484216 /* AnalysisResults.swift in Sources */,
 				CC8D881823F880A80098E0D5 /* TwitterCredentials.swift in Sources */,
 				CC68F36223F947EE00484216 /* ToneAnalyzer.swift in Sources */,
 				CC68F38A23F94D9900484216 /* ToneChatScore.swift in Sources */,
+				CC68F41623F954D100484216 /* SemanticRolesResultAction.swift in Sources */,
+				CC68F3EE23F954D100484216 /* DisambiguationResult.swift in Sources */,
+				CC68F3B323F952C500484216 /* Warning.swift in Sources */,
 				CC68F39623F94E5700484216 /* UtteranceAnalysis.swift in Sources */,
+				CC68F40623F954D100484216 /* EntitiesOptions.swift in Sources */,
+				CC68F3F623F954D100484216 /* KeywordsOptions.swift in Sources */,
+				CC68F3F523F954D100484216 /* SemanticRolesEntity.swift in Sources */,
 				CC8D87E723F77C270098E0D5 /* AppDelegate.swift in Sources */,
 				CC68F39423F94E3900484216 /* UtteranceAnalyses.swift in Sources */,
 				CC4343AA23F90C8700A2D00D /* File.swift in Sources */,
+				CC68F3B223F952C500484216 /* ProfileContent.swift in Sources */,
+				CC68F39823F9514E00484216 /* TopicProfileVC.swift in Sources */,
+				CC68F3F223F954D100484216 /* Feed.swift in Sources */,
+				CC68F3F123F954D100484216 /* SemanticRolesResultSubject.swift in Sources */,
+				CC68F3EB23F954D100484216 /* SentenceResult.swift in Sources */,
+				CC68F41023F954D100484216 /* RelationsOptions.swift in Sources */,
+				CC68F3AE23F952C500484216 /* Profile.swift in Sources */,
+				CC68F3EA23F954D100484216 /* TokenResult.swift in Sources */,
+				CC68F40F23F954D100484216 /* FeatureSentimentResults.swift in Sources */,
 				CC8D880123F798D00098E0D5 /* Constants.swift in Sources */,
-				CC8D882523F8C6110098E0D5 /* ProfileVC.swift in Sources */,
+				CC8D882523F8C6110098E0D5 /* UserProfileVC.swift in Sources */,
 				CC68F38823F94D7A00484216 /* ToneChatInput.swift in Sources */,
+				CC68F3AD23F952C500484216 /* ConsumptionPreferences.swift in Sources */,
 				CC4343A623F8EF0600A2D00D /* AnalysisPage.swift in Sources */,
 				CC8D880A23F7C0EE0098E0D5 /* SearchVC.swift in Sources */,
+				CC68F40B23F954D100484216 /* AnalysisResultsMetadata.swift in Sources */,
+				CC68F3F423F954D100484216 /* RelationArgument.swift in Sources */,
+				CC68F40523F954D100484216 /* EntitiesResult.swift in Sources */,
+				CC68F40E23F954D100484216 /* SemanticRolesResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

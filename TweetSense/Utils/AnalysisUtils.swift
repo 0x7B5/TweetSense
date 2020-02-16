@@ -40,11 +40,10 @@ I'm worried my #ThisPhone is going to overheat like my brother's did.
                 return
             }
             self.analyzedCategoriesArray = []
-//            guard let categories = tones.documentTone.toneCategories else {
-//                print("error fuck")
-//                return
-//            }
+
             print(tones)
+            
+            
 //
 //            // Loop through document tones
 //            for documentTone in categories {
