@@ -206,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="igW-48-E0L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-87.200000000000003" y="67.241379310344826"/>
+            <point key="canvasLocation" x="-286" y="67"/>
         </scene>
         <!--SearchVC-->
         <scene sceneID="Qhm-jb-GfY">
@@ -216,58 +216,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="TTR-NE-rDX">
-                                <rect key="frame" x="15" y="312" width="345" height="41"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="1hU-rI-x8w"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWO-yz-0IH">
-                                <rect key="frame" x="0.0" y="117" width="375" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="CfF-WN-KLP"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Enter Twitter Username ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.22889005829015541" green="0.22889005829015541" blue="0.22889005829015541" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="45" name="HelveticaNeue-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2020-02-15 at 1.40.14 AM" translatesAutoresizingMaskIntoConstraints="NO" id="YX0-Ts-Pnf">
-                                <rect key="frame" x="0.0" y="419" width="375.00000000000045" height="257"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloudsBG" translatesAutoresizingMaskIntoConstraints="NO" id="xJu-ca-E4G">
+                                <rect key="frame" x="0.0" y="145" width="375" height="614"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ar-tz-r7E">
+                                <rect key="frame" x="0.0" y="197" width="375" height="560"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Query" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="TTR-NE-rDX">
+                                        <rect key="frame" x="0.0" y="73" width="375" height="84"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLq-jm-8tT">
+                                        <rect key="frame" x="16" y="427" width="343" height="67"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                        <state key="normal" title="Analyze">
+                                            <color key="titleColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K0d-oS-2Dw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LogoNoText" translatesAutoresizingMaskIntoConstraints="NO" id="YX0-Ts-Pnf">
+                                        <rect key="frame" x="112" y="52" width="150" height="94"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.43972787260000001" green="0.81794947389999995" blue="0.97796660660000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="TWO-yz-0IH" firstAttribute="leading" secondItem="YX0-Ts-Pnf" secondAttribute="leading" id="5fb-VF-lwL"/>
-                            <constraint firstItem="YX0-Ts-Pnf" firstAttribute="top" secondItem="TTR-NE-rDX" secondAttribute="bottom" constant="66" id="8q7-P5-yDL"/>
-                            <constraint firstItem="TWO-yz-0IH" firstAttribute="leading" secondItem="92J-HI-A4D" secondAttribute="leading" id="Jqe-zA-maJ"/>
-                            <constraint firstItem="TWO-yz-0IH" firstAttribute="centerX" secondItem="TTR-NE-rDX" secondAttribute="centerX" id="N2g-QC-hDh"/>
-                            <constraint firstItem="TWO-yz-0IH" firstAttribute="top" secondItem="92J-HI-A4D" secondAttribute="top" constant="117" id="R6t-KO-sa6"/>
-                            <constraint firstItem="TWO-yz-0IH" firstAttribute="centerX" secondItem="w6f-lq-TLW" secondAttribute="centerX" id="UKg-be-vef"/>
-                            <constraint firstItem="TTR-NE-rDX" firstAttribute="centerX" secondItem="YX0-Ts-Pnf" secondAttribute="centerX" id="YJG-DY-HxF"/>
-                            <constraint firstItem="TTR-NE-rDX" firstAttribute="leading" secondItem="92J-HI-A4D" secondAttribute="leading" constant="15" id="dcj-RW-pUE"/>
-                            <constraint firstItem="TTR-NE-rDX" firstAttribute="top" secondItem="92J-HI-A4D" secondAttribute="top" constant="312" id="k1n-hw-pcu"/>
-                            <constraint firstItem="92J-HI-A4D" firstAttribute="bottom" secondItem="YX0-Ts-Pnf" secondAttribute="bottom" constant="48" id="n0x-CI-0Qm"/>
-                        </constraints>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="92J-HI-A4D"/>
                     </view>
                     <navigationItem key="navigationItem" id="IzW-dx-5sK"/>
                     <connections>
+                        <outlet property="coveringView" destination="7ar-tz-r7E" id="WCU-Z4-c2w"/>
                         <outlet property="tweetTF" destination="TTR-NE-rDX" id="NSP-9g-PVS"/>
+                        <outlet property="userButton" destination="xLq-jm-8tT" id="frB-kK-xoj"/>
                         <segue destination="Hq8-S5-rPv" kind="presentation" identifier="toProfile" id="d4P-jS-pQ8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWJ-w3-DFs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="611.59420289855075" y="67.633928571428569"/>
+            <point key="canvasLocation" x="610.39999999999998" y="67.241379310344826"/>
         </scene>
         <!--ProfileVC-->
         <scene sceneID="Dbm-iV-cUj">
@@ -569,7 +570,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Screen Shot 2020-02-15 at 1.40.14 AM" width="1648" height="1366"/>
+        <image name="LogoNoText" width="712" height="651"/>
+        <image name="cloudsBG" width="5472" height="3648"/>
         <image name="drizzy" width="400" height="400"/>
         <image name="elon" width="400" height="400"/>
         <image name="main" width="800" height="800"/>
@@ -580,6 +582,6 @@
         <image name="yang" width="400" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aGt-w7-F4L"/>
+        <segue reference="d4P-jS-pQ8"/>
     </inferredMetricsTieBreakers>
 </document>

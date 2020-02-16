@@ -15,15 +15,24 @@ class SearchVC: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var tweetTF: UITextField!
+    @IBOutlet weak var coveringView: UIView!
+    
+    //Buttons
+    
+    @IBOutlet weak var userButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTextfield()
+        userButton.roundDatHoe()
+        userButton.addBorder()
+        
         tweetTF.delegate = self
     }
     
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+    func tweetTFShouldReturn(_ tweetTF: UITextField) -> Bool {
+        tweetTF.resignFirstResponder()
         handleText()
         return true
     }
@@ -83,6 +92,29 @@ class SearchVC: UIViewController, UITextFieldDelegate {
                 
             }.resume()
         }
+    }
+    
+    func makePrefix() {
+       
+    }
+    
+    func setupTextfield() {
+        let centeredParagraphStyle = NSMutableParagraphStyle()
+        centeredParagraphStyle.alignment = .center
+        let attributedPlaceholder = NSAttributedString(string: "Query", attributes: [NSAttributedString.Key.paragraphStyle: centeredParagraphStyle, NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)])
+        tweetTF.attributedPlaceholder = attributedPlaceholder
+        //tweetTF.placeholder = "Username"
+        tweetTF.font = UIFont.systemFont(ofSize: 42, weight: UIFont.Weight(rawValue: 1.0))
+        tweetTF.adjustsFontSizeToFitWidth = true
+        //tweetTF.borderStyle = UItweetTF.BorderStyle.roundedRect
+        tweetTF.textAlignment = .center
+        tweetTF.autocorrectionType = UITextAutocorrectionType.no
+        tweetTF.keyboardType = UIKeyboardType.default
+        tweetTF.returnKeyType = UIReturnKeyType.done
+        tweetTF.clearButtonMode = UITextField.ViewMode.whileEditing
+        tweetTF.autocapitalizationType = .none
+        tweetTF.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
+        tweetTF.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
     }
     
 }

@@ -11,13 +11,23 @@ import UIKit
 
 extension UIView {
     func dropShadow(scale: Bool = true) {
-        layer.masksToBounds = false
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOpacity = 0.9
-        //layer.shadowOffset = CGSize(width: 2.0, height: 3.0)
-        layer.shadowOffset = .zero
-        layer.shadowRadius = 1
-        layer.shouldRasterize = true
-        layer.rasterizationScale = scale ? UIScreen.main.scale : 1
+        self.layer.shadowPath =
+              UIBezierPath(roundedRect: self.bounds,
+              cornerRadius: self.layer.cornerRadius).cgPath
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = 0.5
+        self.layer.shadowOffset = CGSize(width: 10, height: 10)
+        self.layer.shadowRadius = 1
+        self.layer.masksToBounds = false
+    }
+}
+
+extension UIButton {
+    func roundDatHoe() {
+        self.layer.cornerRadius = 10
+    }
+    func addBorder() {
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.black.cgColor
     }
 }

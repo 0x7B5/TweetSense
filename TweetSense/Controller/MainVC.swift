@@ -16,6 +16,7 @@ class MainVC: UIViewController {
         super.viewDidLoad()
         for i in viewCollection {
             i.roundIt()
+           
         }
     }
 
