@@ -14,8 +14,38 @@ class ProfileVC: UIViewController {
     
     var twitterProfilePicture: UIImage?
     
+    
+    @IBOutlet weak var profileUsername: UILabel!
+    @IBOutlet weak var profileSenseScore: UILabel!
+    
+    
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet var viewCollection: [UIView]!
+    /*
+    **TAG GUIDE*
+    Sentiment View
+        Sentiment Score: 11
+            
+    Language Style View
+        Analytical Score: 21
+        Confident Score: 22
+        Tenative Score: 23
+     
+     Emotion View
+        Fear: 31
+        Joy: 32
+        Disgust: 33
+        Anger: 34
+        Sadness: 35
+     
+     Social Tendencies
+        Agreeableness: 41
+        Conscientiousness: 42
+        Extroversion: 43
+        Emotion Range: 44
+        Openess: 45
+     
+     */
     
     override func viewDidLoad() {
         super.viewDidLoad()

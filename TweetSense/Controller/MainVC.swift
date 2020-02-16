@@ -22,8 +22,10 @@ class MainVC: UIViewController {
     
     func setupUI() {
         for i in viewCollection {
+            
             i.roundIt()
         }
+
         mainButton.setImage(UIImage(named: "plus"), for: .normal)
     }
     
