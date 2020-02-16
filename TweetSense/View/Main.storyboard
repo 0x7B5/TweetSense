@@ -585,6 +585,7 @@
                         <outletCollection property="viewCollection" destination="HJr-X2-etQ" collectionClass="NSMutableArray" id="nB5-hA-KzU"/>
                         <outletCollection property="viewCollection" destination="DB0-iE-tkY" collectionClass="NSMutableArray" id="DxS-MO-Wjv"/>
                         <segue destination="y5Z-iH-pqD" kind="presentation" identifier="backHomeFrom" modalPresentationStyle="fullScreen" id="Xpn-fh-zNJ"/>
+                        <segue destination="IWv-kO-7GN" kind="presentation" identifier="backToSearch" id="4QA-yc-w1E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wgh-Wd-mhl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -607,5 +608,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="aGt-w7-F4L"/>
+        <segue reference="4QA-yc-w1E"/>
     </inferredMetricsTieBreakers>
 </document>
