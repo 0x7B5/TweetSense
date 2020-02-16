@@ -8,7 +8,11 @@
 
 import Foundation
 
-public class TwitterUtils {
-    static let shared = TwitterUtils()
+public class AnalysisUtils {
+    static let shared = AnalysisUtils()
+    
+    
+    
+    func calculate
     
 }
