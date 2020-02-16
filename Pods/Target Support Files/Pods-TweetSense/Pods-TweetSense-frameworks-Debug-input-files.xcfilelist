@@ -1,7 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-TweetSense/Pods-TweetSense-frameworks.sh
-${BUILT_PRODUCTS_DIR}/BMSAnalyticsAPI/BMSAnalyticsAPI.framework
-${BUILT_PRODUCTS_DIR}/BMSCore/BMSCore.framework
 ${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework
+${BUILT_PRODUCTS_DIR}/IBMSwiftSDKCore/IBMSwiftSDKCore.framework
 ${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework
 ${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework
 ${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework

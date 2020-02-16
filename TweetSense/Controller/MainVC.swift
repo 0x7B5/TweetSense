@@ -18,6 +18,7 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        AnalysisUtils.shared.callWatson()
     }
     
     func setupUI() {
