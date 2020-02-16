@@ -9,12 +9,14 @@
 import UIKit
 
 class MainVC: UIViewController {
-    @IBOutlet var imageCollection:[UIView]!
+    @IBOutlet var viewCollection: [UIView]!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        print("yuh")
+        for i in viewCollection {
+            i.roundIt()
+        }
     }
 
 

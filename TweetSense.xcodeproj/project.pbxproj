@@ -21,6 +21,8 @@
 		CC8D880F23F86EDD0098E0D5 /* TwitterUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D880E23F86EDD0098E0D5 /* TwitterUtils.swift */; };
 		CC8D881823F880A80098E0D5 /* TwitterCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D881723F880A80098E0D5 /* TwitterCredentials.swift */; };
 		CC8D882123F89CE90098E0D5 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D882023F89CE90098E0D5 /* Tweet.swift */; };
+		CC8D882323F8BA6C0098E0D5 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D882223F8BA6C0098E0D5 /* UIImageView+Extensions.swift */; };
+		CC8D882523F8C6110098E0D5 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D882423F8C6110098E0D5 /* ProfileVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		CC8D880E23F86EDD0098E0D5 /* TwitterUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterUtils.swift; sourceTree = "<group>"; };
 		CC8D881723F880A80098E0D5 /* TwitterCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterCredentials.swift; sourceTree = "<group>"; };
 		CC8D882023F89CE90098E0D5 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		CC8D882223F8BA6C0098E0D5 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		CC8D882423F8C6110098E0D5 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,7 @@
 			children = (
 				CC8D87EA23F77C270098E0D5 /* MainVC.swift */,
 				CC8D880923F7C0EE0098E0D5 /* SearchVC.swift */,
+				CC8D882423F8C6110098E0D5 /* ProfileVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				CC8D880523F7B45D0098E0D5 /* UIView+Extensions.swift */,
+				CC8D882223F8BA6C0098E0D5 /* UIImageView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -276,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC8D882323F8BA6C0098E0D5 /* UIImageView+Extensions.swift in Sources */,
 				CC8D87EB23F77C270098E0D5 /* MainVC.swift in Sources */,
 				CC8D87FF23F77EAB0098E0D5 /* MainView.swift in Sources */,
 				CC8D880F23F86EDD0098E0D5 /* TwitterUtils.swift in Sources */,
@@ -284,6 +291,7 @@
 				CC8D881823F880A80098E0D5 /* TwitterCredentials.swift in Sources */,
 				CC8D87E723F77C270098E0D5 /* AppDelegate.swift in Sources */,
 				CC8D880123F798D00098E0D5 /* Constants.swift in Sources */,
+				CC8D882523F8C6110098E0D5 /* ProfileVC.swift in Sources */,
 				CC8D880A23F7C0EE0098E0D5 /* SearchVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

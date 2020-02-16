@@ -36,7 +36,7 @@ class SearchVC: UIViewController, UITextFieldDelegate {
         if tweetTF.text != nil && tweetTF.text != "" {
             let tempText = tweetTF.text!
             getTweets(username: tempText, completion: { tweets in
-                print(tweets)
+                self.performSegue(withIdentifier: "toProfile", sender: self)
             })
         } else {
             let alert = UIAlertController(title: "Username not found", message: "Please Enter Valid Username", preferredStyle: .alert)
