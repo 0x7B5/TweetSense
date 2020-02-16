@@ -49,6 +49,9 @@ class SearchVC: UIViewController, UITextFieldDelegate {
         let protectedRange = NSMakeRange(0, 1)
         let intersection = NSIntersectionRange(protectedRange, range)
         if intersection.length > 0 {
+            if (Constants.userSearch == false) {
+                return true
+            }
             return false
         }
         return true
@@ -104,6 +107,7 @@ class SearchVC: UIViewController, UITextFieldDelegate {
     }
     
     func getUserTweets(username: String, completion: @escaping ([Tweet]?) -> ()) {
+        UIApplication.shared.beginIgnoringInteractionEvents()
         let loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
         loadingNotification.mode = MBProgressHUDMode.indeterminate
         loadingNotification.label.text = "Fetching Tweets"
@@ -134,7 +138,7 @@ class SearchVC: UIViewController, UITextFieldDelegate {
                             for i in tempArray {
                                 if !(i.contains("https://")) {
                                     if (i.count == 0) {
-                                       tweetText = tweetText + i
+                                        tweetText = tweetText + i
                                     } else {
                                         tweetText = tweetText + " " + i
                                     }
@@ -149,12 +153,14 @@ class SearchVC: UIViewController, UITextFieldDelegate {
                     print(userTweets)
                     DispatchQueue.main.async { () -> Void in
                         loadingNotification.hide(animated: true)
+                        UIApplication.shared.endIgnoringInteractionEvents()
                         completion(userTweets)
                     }
                 } catch let parsingError {
                     print("Error", parsingError)
                     DispatchQueue.main.async { () -> Void in
                         loadingNotification.hide(animated: true)
+                        UIApplication.shared.endIgnoringInteractionEvents()
                         completion(nil)
                     }
                 }
@@ -168,7 +174,7 @@ class SearchVC: UIViewController, UITextFieldDelegate {
         let loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
         loadingNotification.mode = MBProgressHUDMode.indeterminate
         loadingNotification.label.text = "Fetching Tweets"
-        
+        UIApplication.shared.beginIgnoringInteractionEvents()
         
         var userTweets = [Tweet]()
         
@@ -176,7 +182,7 @@ class SearchVC: UIViewController, UITextFieldDelegate {
         let swifter = Swifter(consumerKey: Constants.TWITTER_CONSUMER_KEY, consumerSecret: Constants.TWITTER_CONSUMER_SECRET, appOnly: true)
         
         swifter.authorizeAppOnly(success: { (accessToken, response) -> Void in
-          
+            
             swifter.searchTweet(using: topic, geocode: "", lang: "en", locale: "", resultType: "", count: 300, until: "", sinceID: "2009-01-01", maxID: "", includeEntities: false, callback: "", tweetMode: .extended, success: { (statuses, searchMetadata) -> Void in
                 
                 for i in statuses.array! {
@@ -204,7 +210,7 @@ class SearchVC: UIViewController, UITextFieldDelegate {
                         for i in tempArray {
                             if !(i.contains("https://")) {
                                 if (i.count == 0) {
-                                   tweetText = i
+                                    tweetText = i
                                 } else {
                                     tweetText = tweetText + " " + i
                                 }
@@ -226,6 +232,7 @@ class SearchVC: UIViewController, UITextFieldDelegate {
                     print("____")
                     DispatchQueue.main.async { () -> Void in
                         loadingNotification.hide(animated: true)
+                        UIApplication.shared.endIgnoringInteractionEvents()
                         completion(userTweets)
                     }
                 }
@@ -234,14 +241,16 @@ class SearchVC: UIViewController, UITextFieldDelegate {
                 print(error)
                 DispatchQueue.main.async { () -> Void in
                     loadingNotification.hide(animated: true)
+                    UIApplication.shared.endIgnoringInteractionEvents()
                     completion(nil)
                 }
             }
             print("\(response)")
         }, failure: { (error) -> Void in
-              print(error)
+            print(error)
             DispatchQueue.main.async { () -> Void in
                 loadingNotification.hide(animated: true)
+                UIApplication.shared.endIgnoringInteractionEvents()
                 completion(nil)
             }
         })
