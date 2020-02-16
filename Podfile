@@ -10,4 +10,5 @@ target 'TweetSense' do
   pod 'MBProgressHUD', '~> 1.2.0'
   pod 'BMSCore', '~> 2.0'
   pod 'PopupDialog', '~> 1.1'
+  pod 'Swifter', :git => 'https://github.com/mattdonnelly/Swifter.git'
 end

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import MBProgressHUD
+import Swifter
 
 
 class SearchVC: UIViewController, UITextFieldDelegate {
@@ -39,7 +40,7 @@ class SearchVC: UIViewController, UITextFieldDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.tweetTF.becomeFirstResponder()
-
+        
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -117,8 +118,32 @@ class SearchVC: UIViewController, UITextFieldDelegate {
                     
                     for i in json! {
                         let itemDate = i["Date"] as! String
-                        let itemText = i["Text"] as! String
-                        userTweets.append(Tweet(date: itemDate, text: itemText))
+                        var tweetText = i["Text"] as! String
+                        print(tweetText)
+                        
+                        if (tweetText.contains("RT")) {
+                            if let range = tweetText.range(of: ": ") {
+                                let phone = tweetText[range.upperBound...]
+                                tweetText = String(phone)
+                            }
+                        }
+                        
+                        if (tweetText.contains("https://")) {
+                            let tempArray = tweetText.components(separatedBy: " ")
+                            tweetText = ""
+                            for i in tempArray {
+                                if !(i.contains("https://")) {
+                                    if (i.count == 0) {
+                                       tweetText = tweetText + i
+                                    } else {
+                                        tweetText = tweetText + " " + i
+                                    }
+                                    
+                                }
+                            }
+                        }
+                        
+                        userTweets.append(Tweet(date: itemDate, text: tweetText))
                     }
                     
                     print(userTweets)
@@ -144,34 +169,82 @@ class SearchVC: UIViewController, UITextFieldDelegate {
         loadingNotification.mode = MBProgressHUDMode.indeterminate
         loadingNotification.label.text = "Fetching Tweets"
         
-        if let url = URL(string:("https://tweetsense-268300.appspot.com/topic/"+topic)) {
-            URLSession.shared.dataTask(with: url) { data, response, error in
-                guard let data = data else { return }
-                do {
-                    var userTweets = [Tweet]()
-                    let json = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]]
-                    //print(json)
+        
+        var userTweets = [Tweet]()
+        
+        
+        let swifter = Swifter(consumerKey: Constants.TWITTER_CONSUMER_KEY, consumerSecret: Constants.TWITTER_CONSUMER_SECRET, appOnly: true)
+        
+        swifter.authorizeAppOnly(success: { (accessToken, response) -> Void in
+          
+            swifter.searchTweet(using: topic, geocode: "", lang: "en", locale: "", resultType: "", count: 300, until: "", sinceID: "2009-01-01", maxID: "", includeEntities: false, callback: "", tweetMode: .extended, success: { (statuses, searchMetadata) -> Void in
+                
+                for i in statuses.array! {
+                    var tweetText = i["full_text"].string ?? ""
+                    var tweetDate = i["created_at"].string ?? ""
                     
-                    for i in json! {
-                        let itemDate = i["Date"] as! String
-                        let itemText = i["Text"] as! String
-                        userTweets.append(Tweet(date: itemDate, text: itemText))
+                    if tweetText == "" {
+                        continue
                     }
                     
-                    print(userTweets)
+                    if tweetDate == "" {
+                        continue
+                    }
+                    
+                    if (tweetText.contains("RT")) {
+                        if let range = tweetText.range(of: ": ") {
+                            let phone = tweetText[range.upperBound...]
+                            tweetText = String(phone)
+                        }
+                    }
+                    
+                    if (tweetText.contains("https://")) {
+                        let tempArray = tweetText.components(separatedBy: " ")
+                        tweetText = ""
+                        for i in tempArray {
+                            if !(i.contains("https://")) {
+                                if (i.count == 0) {
+                                   tweetText = i
+                                } else {
+                                    tweetText = tweetText + " " + i
+                                }
+                                
+                            }
+                        }
+                    }
+                    
+                    let formatter = DateFormatter()
+                    formatter.dateFormat = "yyyy-MM-dd"
+                    if let date = formatter.date(from: tweetDate) {
+                        tweetDate = formatter.string(from: date)
+                    }
+                    
+                    
+                    print(tweetText)
+                    print(tweetDate)
+                    userTweets.append(Tweet(date: tweetDate, text: tweetText))
+                    print("____")
                     DispatchQueue.main.async { () -> Void in
                         loadingNotification.hide(animated: true)
                         completion(userTweets)
                     }
-                } catch let parsingError {
-                    print("Error", parsingError)
-                    DispatchQueue.main.async { () -> Void in
-                        loadingNotification.hide(animated: true)
-                        completion(nil)
-                    }
                 }
-            }.resume()
-        }
+                
+            }) { (error) -> Void in
+                print(error)
+                DispatchQueue.main.async { () -> Void in
+                    loadingNotification.hide(animated: true)
+                    completion(nil)
+                }
+            }
+            print("\(response)")
+        }, failure: { (error) -> Void in
+              print(error)
+            DispatchQueue.main.async { () -> Void in
+                loadingNotification.hide(animated: true)
+                completion(nil)
+            }
+        })
     }
     
     func setupTextfield() {
