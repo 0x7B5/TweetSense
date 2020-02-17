@@ -19,6 +19,7 @@ class SearchVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var coveringView: UIView!
     private var usernamePrefix = NSMutableAttributedString(string: "@")
     
+    var userUser: AnalysisPage?
     //Buttons
     @IBOutlet weak var userButton: UIButton!
     
@@ -65,7 +66,6 @@ class SearchVC: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         tweetTF.resignFirstResponder()
-        print("return return")
         handleText()
         return true
     }
@@ -83,18 +83,45 @@ class SearchVC: UIViewController, UITextFieldDelegate {
     func handleText() {
         if tweetTF.text != nil && tweetTF.text != "" {
             let tempText = tweetTF.text!
-            print(tempText)
+            let loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
+            
             if (Constants.userSearch == false) {
                 getTopicTweets(topic: tempText, completion: { tweets in
-                    self.performSegue(withIdentifier: "toProfile", sender: self)
+                    DispatchQueue.main.async { () -> Void in
+                        loadingNotification.mode = MBProgressHUDMode.indeterminate
+                        loadingNotification.label.text = "Analyzing Tweets"
+                    }
+                    
+                    AnalysisUtils.shared.setUpAnalysisPage(username: tempText, isUser: false, with: tweets!, completion: { user in
+                        self.userUser = user
+                        DispatchQueue.main.async { () -> Void in
+                            loadingNotification.hide(animated: true)
+                            
+                            self.performSegue(withIdentifier: "toTopic", sender: self)
+                        }
+                    })
                 })
+                
             } else {
                 let newTempText = tempText.substring(from: 1)
-                print(newTempText)
                 getUserTweets(username: newTempText, completion: { tweets in
-                    self.performSegue(withIdentifier: "toProfile", sender: self)
+                    DispatchQueue.main.async { () -> Void in
+                        loadingNotification.mode = MBProgressHUDMode.indeterminate
+                        loadingNotification.label.text = "Analyzing Tweets"
+                    }
+                    
+                    AnalysisUtils.shared.setUpAnalysisPage(username: tempText, isUser: false, with: tweets!, completion: { user in
+                        self.userUser = user
+                        DispatchQueue.main.async { () -> Void in
+                            loadingNotification.hide(animated: true)
+                            self.performSegue(withIdentifier: "toProfile", sender: self)
+                        }
+                    })
                 })
+                
+                
             }
+            
             
         } else {
             let alert = UIAlertController(title: "Username not found", message: "Please Enter Valid Username", preferredStyle: .alert)
@@ -106,8 +133,8 @@ class SearchVC: UIViewController, UITextFieldDelegate {
         tweetTF.text = ""
     }
     
+    
     func getUserTweets(username: String, completion: @escaping ([Tweet]?) -> ()) {
-        UIApplication.shared.beginIgnoringInteractionEvents()
         let loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
         loadingNotification.mode = MBProgressHUDMode.indeterminate
         loadingNotification.label.text = "Fetching Tweets"
@@ -118,12 +145,12 @@ class SearchVC: UIViewController, UITextFieldDelegate {
                 do {
                     var userTweets = [Tweet]()
                     let json = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]]
-                    //print(json)
+                    
                     
                     for i in json! {
                         let itemDate = i["Date"] as! String
                         var tweetText = i["Text"] as! String
-                        print(tweetText)
+                        
                         
                         if (tweetText.contains("RT")) {
                             if let range = tweetText.range(of: ": ") {
@@ -142,7 +169,6 @@ class SearchVC: UIViewController, UITextFieldDelegate {
                                     } else {
                                         tweetText = tweetText + " " + i
                                     }
-                                    
                                 }
                             }
                         }
@@ -150,19 +176,15 @@ class SearchVC: UIViewController, UITextFieldDelegate {
                         userTweets.append(Tweet(date: itemDate, text: tweetText))
                     }
                     
-                    print(userTweets)
+                    
                     DispatchQueue.main.async { () -> Void in
                         loadingNotification.hide(animated: true)
-                        UIApplication.shared.endIgnoringInteractionEvents()
-                        completion(userTweets)
+                        
                     }
+                    completion(userTweets)
                 } catch let parsingError {
                     print("Error", parsingError)
-                    DispatchQueue.main.async { () -> Void in
-                        loadingNotification.hide(animated: true)
-                        UIApplication.shared.endIgnoringInteractionEvents()
-                        completion(nil)
-                    }
+                    completion(nil)
                 }
                 
                 
@@ -170,11 +192,22 @@ class SearchVC: UIViewController, UITextFieldDelegate {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is UserProfileVC {
+            var vc = segue.destination as? UserProfileVC
+            vc?.currentUser = userUser
+        } else if segue.destination is TopicProfileVC {
+            var vc = segue.destination as? TopicProfileVC
+            vc?.currentTopic = userUser
+        }
+    }
+    
     func getTopicTweets(topic: String, completion: @escaping ([Tweet]?) -> ()) {
+        
         let loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
         loadingNotification.mode = MBProgressHUDMode.indeterminate
         loadingNotification.label.text = "Fetching Tweets"
-        UIApplication.shared.beginIgnoringInteractionEvents()
         
         var userTweets = [Tweet]()
         
@@ -226,33 +259,33 @@ class SearchVC: UIViewController, UITextFieldDelegate {
                     }
                     
                     
-                    print(tweetText)
-                    print(tweetDate)
+                    
                     userTweets.append(Tweet(date: tweetDate, text: tweetText))
-                    print("____")
-                    DispatchQueue.main.async { () -> Void in
-                        loadingNotification.hide(animated: true)
-                        UIApplication.shared.endIgnoringInteractionEvents()
-                        completion(userTweets)
-                    }
+                    
+                    
                 }
+                DispatchQueue.main.async { () -> Void in
+                    print("line 239")
+                    loadingNotification.hide(animated: true)
+                }
+                completion(userTweets)
                 
             }) { (error) -> Void in
                 print(error)
                 DispatchQueue.main.async { () -> Void in
                     loadingNotification.hide(animated: true)
-                    UIApplication.shared.endIgnoringInteractionEvents()
-                    completion(nil)
                 }
+                print("line 250")
+                completion(nil)
             }
-            print("\(response)")
+            
         }, failure: { (error) -> Void in
             print(error)
             DispatchQueue.main.async { () -> Void in
                 loadingNotification.hide(animated: true)
-                UIApplication.shared.endIgnoringInteractionEvents()
-                completion(nil)
             }
+            print("line 259")
+            completion(nil)
         })
     }
     

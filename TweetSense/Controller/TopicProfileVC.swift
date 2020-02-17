@@ -16,14 +16,22 @@ class TopicProfileVC: UIViewController {
     
     @IBOutlet weak var topicProfilePicture: UIImageView!
     @IBOutlet weak var topicName: UILabel!
-    @IBOutlet weak var topicSenseScore: UILabel!
+
+    @IBOutlet var labels: [UILabel]!
+   
+    
+    @IBOutlet weak var analytical: UILabel!
+    
+    @IBOutlet weak var confidenceLabel: UILabel!
+    
+    @IBOutlet weak var tenativeLabel: UILabel!
     
     
+    @IBOutlet weak var sentimentLabel: UILabel!
     
+    @IBOutlet weak var magnitudeLabel: UILabel!
     
-    
-    
-    let currentTopic: AnalysisPage? = nil
+    var currentTopic: AnalysisPage? = nil
     
     
     /*
@@ -102,6 +110,16 @@ class TopicProfileVC: UIViewController {
 //            i.roundIt()
 //            // i.dropShadow()
 //        }
+        
+        for i in 0..<5 {
+            labels[i].text = String(currentTopic!.toneScores[i])
+        }
+        sentimentLabel.text = String(currentTopic!.sentimentScore)
+        magnitudeLabel.text = String(currentTopic!.magnitude)
+        analytical.text = String(currentTopic!.toneScores[4])
+        confidenceLabel.text = String(currentTopic!.toneScores[5])
+        tenativeLabel.text = String(currentTopic!.toneScores[6])
+        topicName.text = String(currentTopic!.name)
     }
     
     func errorMessage() {

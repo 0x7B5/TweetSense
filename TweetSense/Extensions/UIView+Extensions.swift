@@ -31,3 +31,14 @@ extension UIButton {
         self.layer.borderColor = UIColor.black.cgColor
     }
 }
+
+
+import Foundation
+
+extension Array {
+
+  func randomElement() -> Element?  {
+     if isEmpty { return nil }
+     return self[Int(arc4random_uniform(UInt32(self.count)))]
+  }
+}

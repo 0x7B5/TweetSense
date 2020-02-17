@@ -12,26 +12,98 @@ import SwiftyJSON
 public class AnalysisUtils {
     static let shared = AnalysisUtils()
     var analyzedCategoriesArray: [ToneCategory] = []
+    var longText = ""
+    var googleText = ""
     
-    func callWatson(toAnalyze: String, completion: @escaping (Double?) -> ()) {
+    func setUpAnalysisPage(username: String, isUser: Bool, with: [Tweet], completion: @escaping (AnalysisPage?) -> ()) {
+        
+        var mag = 0.0
+        var sentiment = 0.0
+        var analysisPage: AnalysisPage
+        
+        for _ in 0..<100 {
+            longText = longText + "." + with[Int.random(in: 0 ..< with.count)].text
+        }
+        
+        for _ in 0..<200 {
+            googleText = googleText + "." + with[Int.random(in: 0 ..< with.count)].text
+        }
+        
+        let sentimentScore = getSentimentScore(toAnalyze: googleText, completion: {score,magnitude  in
+            sentiment = score
+            mag = magnitude
+            self.callWatson(completion: { toneScores  in
+                self.getPersonality(toAnalyze: self.longText, completion: {
+                    pers in
+                   
+                    let useruser = AnalysisPage(name: username, isUser: isUser, tweets: with, sentimentScore: sentiment, toneScores: toneScores, magnitude: mag, personality: pers!)
+                    completion(useruser)
+                })
+            })
+            
+           
+        })
+        
+        
+        
+        
+    }
+    
+    func getPersonality(toAnalyze: String, completion: @escaping (Profile?) -> ()) {
+       
+        let version = "2020-02-15" // use today's date for the most recent version
+        let personalityInsights = PersonalityInsights(version: version, authenticator: WatsonBasicAuthenticator(username: "apikey", password: ""))
+
+        let content = ProfileContent.text(toAnalyze)
+        personalityInsights.profile(profileContent: content) { response, error in
+            if let error = error {
+                print(error)
+                completion(nil)
+            }
+            guard let profile = response?.result else {
+                print("Failed to generate profile")
+                completion(nil)
+                return
+            }
+            completion(profile)
+            print("Personality")
+            print(profile.personality)
+            
+            print("Needs")
+            print(profile.needs)
+0
+            
+            var yuhyuh = [Trait]()
+
+            for i in profile.needs {
+                if(i.percentile > 0.5) {
+                    yuhyuh.append(i)
+                }
+            }
+
+            let newnew = yuhyuh.sorted(by: { $0.percentile > $1.percentile })
+            print(newnew)
+            
+            print("Values")
+            print(profile.values)
+            
+        }
+    }
+    func callWatson(completion: @escaping ([Double]) -> ())  {
+    
+        var toneScores = [Double]()
+        
+        for _ in 0..<8 {
+            toneScores.append(0.0)
+        }
         
         #warning("Put today's date here")
-        let inputText = """
-I hate these new features On #ThisPhone after the update.
-I hate #ThisPhoneCompany products, you'd have to torture me to get me to use #ThisPhone.
-The emojis in #ThisPhone are stupid.
-#ThisPhone is a useless, stupid waste of money.
-#ThisPhone is the worst phone I've ever had - ever 😠.
-#ThisPhone another ripoff, lost all respect SHAME.
-I'm worried my #ThisPhone is going to overheat like my brother's did.
-#ThisPhoneCompany really let me down... my new phone won't even turn on.
-"""
         let version = "YYYY-MM-DD" // use today's date for the most recent version
-        let toneAnalyzer = ToneAnalyzer(version: "2020-02-15", authenticator: WatsonBasicAuthenticator(username: "apikey", password: "OiiD65lKNoiE0kBdlApvIi4uE66hmxqKlF5qxwG4pl-J"))
+        let toneAnalyzer = ToneAnalyzer(version: "2020-02-15", authenticator: WatsonBasicAuthenticator(username: "apikey", password: "-J"))
         
-        let input = ToneInput(text: inputText)
+        let input = ToneInput(text: longText)
         
-        toneAnalyzer.tone(toneContent: .toneInput(input)) { response, error in
+        toneAnalyzer.tone(toneContent: .toneInput(input), sentences: false) { response, error in
             if let error = error {
                 print(error)
             }
@@ -41,24 +113,59 @@ I'm worried my #ThisPhone is going to overheat like my brother's did.
             }
             self.analyzedCategoriesArray = []
             
-            print(tones)
+            //print(tones)
+           
             
+            var myCount = 0
+            for i in tones.documentTone.tones! {
+                switch i.toneID {
+                case "joy":
+                    toneScores[1] = toneScores[1] + i.score
+                case "fear":
+                    toneScores[0] = toneScores[0] + i.score
+                case "sadness":
+                    toneScores[3] = toneScores[3] + i.score
+                case "anger":
+                    toneScores[2] = toneScores[2] + i.score
+                case "tenative":
+                    toneScores[4] = toneScores[4] + i.score
+                case "confident":
+                    toneScores[5] = toneScores[5] + i.score
+                case "analytical":
+                    toneScores[6] = toneScores[6] + i.score
+                default:
+                    break
+                }
+                myCount += 1
+            }
+            
+            
+            
+            for i in 0..<8{
+                toneScores[i] = toneScores[i]/Double(myCount)
+            }
+            print(toneScores)
         }
+         completion(toneScores)
     }
     
-    func getSentimentScore(toAnalyze: String, completion: @escaping (Double?) -> ()) {
+    func getSentimentScore(toAnalyze: String, completion: @escaping (Double,Double) -> ()) {
         
+        var parseAnalyzed = toAnalyze.replacingOccurrences(of: "\\", with: "")
+        var parseAnalyzed2 = parseAnalyzed.replacingOccurrences(of: "\n", with: "")
+        var parseAnalyzed3 = parseAnalyzed2.replacingOccurrences(of: "\"", with: "")
+        var parseAnalyzed4 = parseAnalyzed3.replacingOccurrences(of: ".\"", with: "")
         let yuh = """
         {
         "document":{
         "type":"PLAIN_TEXT",
-        "content":"\(toAnalyze)"
+        "content":"\(parseAnalyzed4)"
         },
         "encodingType": "UTF8"
         }
         """
        
-        guard let url = URL(string: "https://language.googleapis.com/v1/documents:analyzeSentiment?key=AIzaSyAvagB9vuqGp00y8bYl7lgqQmDoBtkioGM"),
+        guard let url = URL(string: "https://language.googleapis.com/v1/documents:analyzeSentiment?key="),
             let payload = yuh.data(using: .utf8) else {
                 return
         }
@@ -73,23 +180,34 @@ I'm worried my #ThisPhone is going to overheat like my brother's did.
             guard error == nil else { print(error!.localizedDescription); return }
             guard let data = data else { print("Empty data"); return }
             
-            if let str = String(data: data, encoding: .utf8) {
-                print(str)
-                completion(nil)
-            }
-        }.resume()
-        
-    }
-    
-    func convertToDictionary(text: String) -> [String: Any]? {
-        if let data = text.data(using: .utf8) {
             do {
-                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+                let yuh = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+                print(yuh)
+                for (key, value) in yuh! {
+                    if(key == "documentSentiment") {
+                        do {
+                            let myVar = value as? [String: Double]
+                            print(myVar!["score"], myVar!["magnitude"])
+                            
+                            completion(myVar!["score"]!,myVar!["magnitude"]!)
+                        } catch {
+                            completion(0.0,0.0)
+                        }
+                        
+                    }
+                   
+                }
             } catch {
                 print(error.localizedDescription)
+                completion(0.0,0.0)
             }
-        }
-        return nil
+            
+//            if let str = String(data: data, encoding: .utf8) {
+//                print(str)
+//                completion(nil)
+//            }
+        }.resume()
+        
     }
     
     

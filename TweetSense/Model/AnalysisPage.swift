@@ -11,41 +11,90 @@ import UIKit
 
 struct AnalysisPage {
     let name: String
-    let photoUrl: String
-    var senseScore: Double
+   // let photoUrl: String
+   // var senseScore: Double
     let isUser: Bool
     
     let tweets: [Tweet]
     //Sentiment Score
     let sentimentScore: Double
-    let sentimentColor: UIColor
+    let magnitude: Double
+   // let sentimentColor: UIColor
     
-    //Language Style
-    let languageScores: [Int]
-    let languageColor: UIColor
+    //Values
+    // let valuesScores: [Int]
+    //let valuesColor: UIColor
 
     //Emotion
-    let emotionScores: [Int]
-    let emotionColor: UIColor
+    let toneScores: [Double]
+    
+    let personality: Profile
+   // let toneColor: UIColor
     
     //Social Tendencies
-    let socialTendencies: [Int]
-    let socialColor: UIColor
+    //let socialTendencies: [Int]
+    //let socialColor: UIColor
+    
+    func getPersonality() -> [String] {
+        
+        var yuhyuh = [Trait]()
+        var tempy = [String]()
+        
+        for i in personality.personality {
+            if(i.percentile > 0.5) {
+                yuhyuh.append(i)
+            }
+        }
 
-    init(name:String, photoUrl:String, senseScore:Double, isUser:Bool, tweets:[Tweet], sentimentScore:Double, sentimentColor:UIColor, languageScores:[Int], languageColor:UIColor, emotionScores:[Int], emotionColor:UIColor, socialTendencies:[Int], socialColor:UIColor) {
+        let newnew = yuhyuh.sorted(by: { $0.percentile > $1.percentile })
+        print(newnew)
+        
+        print("Personality Traits")
+        print("-------------------")
+        for i in 0..<newnew.count {
+            
+           
+            print(newnew[i].name)
+            print(newnew[i].percentile)
+            print("")
+        }
+        
+        print("Needs")
+        print("-------------------")
+        for i in personality.needs {
+            print(i.name)
+            print(i.percentile)
+            tempy.append(i.name)
+            tempy.append(String(i.percentile))
+            print("")
+        }
+        
+        print("Values")
+        print("-------------------")
+        for i in personality.values {
+            print(i.name)
+            print(i.percentile)
+            print("")
+        }
+        
+        return tempy
+        
+    }
+
+    init(name:String, isUser:Bool, tweets:[Tweet], sentimentScore:Double, toneScores:[Double], magnitude:Double, personality: Profile) {
         self.name = name
-        self.photoUrl = photoUrl
-        self.senseScore = senseScore
+       
         self.isUser = isUser
         self.tweets = tweets
         self.sentimentScore = sentimentScore
-        self.sentimentColor = sentimentColor
-        self.languageScores = languageScores
-        self.languageColor = languageColor
-        self.emotionScores = emotionScores
-        self.emotionColor = emotionColor
-        self.socialTendencies = socialTendencies
-        self.socialColor = socialColor
+
+       
+        self.toneScores = toneScores
+       // self.toneColor = toneColor
+        //self.socialTendencies = socialTendencies
+       // self.socialColor = socialColor
+        self.magnitude = magnitude
+        self.personality = personality
     }
     
     

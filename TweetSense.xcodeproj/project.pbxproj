@@ -86,6 +86,7 @@
 		CC68F41823F954D100484216 /* AnalysisResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3E623F954D100484216 /* AnalysisResults.swift */; };
 		CC68F41923F954D100484216 /* CategoriesRelevantText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3E723F954D100484216 /* CategoriesRelevantText.swift */; };
 		CC68F41A23F954D100484216 /* KeywordsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F3E823F954D100484216 /* KeywordsResult.swift */; };
+		CC68F41D23F97BD500484216 /* PersonalityInsights.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68F41C23F97BD400484216 /* PersonalityInsights.swift */; };
 		CC8D87E723F77C270098E0D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D87E623F77C270098E0D5 /* AppDelegate.swift */; };
 		CC8D87EB23F77C270098E0D5 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D87EA23F77C270098E0D5 /* MainVC.swift */; };
 		CC8D87EE23F77C270098E0D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8D87EC23F77C270098E0D5 /* Main.storyboard */; };
@@ -186,6 +187,7 @@
 		CC68F3E723F954D100484216 /* CategoriesRelevantText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoriesRelevantText.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/CategoriesRelevantText.swift"; sourceTree = "<group>"; };
 		CC68F3E823F954D100484216 /* KeywordsResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeywordsResult.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/NaturalLanguageUnderstandingV1/Models/KeywordsResult.swift"; sourceTree = "<group>"; };
 		CC68F41B23F956C500484216 /* TweetSense.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TweetSense.entitlements; sourceTree = "<group>"; };
+		CC68F41C23F97BD400484216 /* PersonalityInsights.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonalityInsights.swift; path = "../../../../../../../../Downloads/swift-sdk-master-2/Source/PersonalityInsightsV3/PersonalityInsights.swift"; sourceTree = "<group>"; };
 		CC8D87E323F77C270098E0D5 /* TweetSense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetSense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8D87E623F77C270098E0D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC8D87EA23F77C270098E0D5 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				CC68F3A623F952C500484216 /* Content.swift */,
 				CC68F3A723F952C500484216 /* ContentItem.swift */,
 				CC68F3A523F952C500484216 /* Profile.swift */,
+				CC68F41C23F97BD400484216 /* PersonalityInsights.swift */,
 				CC68F3A923F952C500484216 /* ProfileContent.swift */,
 				CC68F3AC23F952C500484216 /* Trait.swift */,
 				CC68F3AA23F952C500484216 /* Warning.swift */,
@@ -609,6 +612,7 @@
 				CC68F41823F954D100484216 /* AnalysisResults.swift in Sources */,
 				CC8D881823F880A80098E0D5 /* TwitterCredentials.swift in Sources */,
 				CC68F36223F947EE00484216 /* ToneAnalyzer.swift in Sources */,
+				CC68F41D23F97BD500484216 /* PersonalityInsights.swift in Sources */,
 				CC68F38A23F94D9900484216 /* ToneChatScore.swift in Sources */,
 				CC68F41623F954D100484216 /* SemanticRolesResultAction.swift in Sources */,
 				CC68F3EE23F954D100484216 /* DisambiguationResult.swift in Sources */,

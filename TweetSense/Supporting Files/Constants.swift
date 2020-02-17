@@ -13,8 +13,8 @@ import UIKit
 public struct Constants {
     static let mainBackground = UIImage(named: "main")!
     static var userSearch = true
-    static let TWITTER_CONSUMER_KEY = "cHaEtMGlSaPlTXJ78aIPTvOnO"
-    static let TWITTER_CONSUMER_SECRET = "eGEG7pfAdpTnQKgxm993bh7vRrKPecjOxnyXv2NO0yuCUGSy55"
+    static let TWITTER_CONSUMER_KEY = ""
+    static let TWITTER_CONSUMER_SECRET = ""
     static let greenColor = UIColor(red: 56, green: 219, blue: 99, alpha: 1.0)
     static let redColor = UIColor(red: 255, green: 59, blue: 48, alpha: 1.0)
     

@@ -14,11 +14,13 @@ class UserProfileVC: UIViewController {
     
     var twitterProfilePicture: UIImage?
     
-    let currentUser: AnalysisPage? = nil
+    var currentUser: AnalysisPage? = nil
     
+
+    @IBOutlet weak var sentimentLabel: UILabel!
     
+    @IBOutlet weak var magnitudeLabel: UILabel!
     @IBOutlet weak var profileUsername: UILabel!
-    @IBOutlet weak var profileSenseScore: UILabel!
     
     
     @IBOutlet weak var profilePicture: UIImageView!
@@ -48,19 +50,26 @@ class UserProfileVC: UIViewController {
      Openess: 45
      
      */
+    @IBOutlet weak var fearLabel: UILabel!
+    @IBOutlet weak var joyLabel: UILabel!
+    @IBOutlet weak var sadnessLabel: UILabel!
+    @IBOutlet weak var angerLabel: UILabel!
+    
+    @IBOutlet weak var analyticalLabel: UILabel!
+    @IBOutlet weak var confidentLabel: UILabel!
+    @IBOutlet weak var tenativeLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
         if (currentUser == nil) {
             errorMessage()
         }
-        
-        setupUI()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         if (currentUser == nil) {
             errorMessage()
         }
+         setupUI()
     }
     
     
@@ -104,6 +113,22 @@ class UserProfileVC: UIViewController {
             i.roundIt()
             // i.dropShadow()
         }
+        profileUsername.text = currentUser!.name
+        
+        
+        sentimentLabel.text = String(currentUser!.sentimentScore)
+        magnitudeLabel.text = String(currentUser!.magnitude)
+        fearLabel.text = String(currentUser!.toneScores[0])
+        joyLabel.text = String(currentUser!.toneScores[1])
+        print(currentUser!.toneScores[1])
+        sadnessLabel.text = String(currentUser!.toneScores[3])
+        angerLabel.text = String(currentUser!.toneScores[2])
+        
+        analyticalLabel.text = String(currentUser!.toneScores[6])
+        confidentLabel.text = String(currentUser!.toneScores[5])
+        tenativeLabel.text = String(currentUser!.toneScores[4])
+        let tempy = currentUser!.getPersonality()
+        
     }
     
     func setupColors() {
@@ -129,7 +154,7 @@ class UserProfileVC: UIViewController {
         
         // Present dialog
         self.present(popup, animated: true, completion: {
-             self.performSegue(withIdentifier: "backHomeFrom", sender: self)
+            self.performSegue(withIdentifier: "backHomeFrom", sender: self)
         })
     }
     
